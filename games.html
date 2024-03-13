@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Games</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="games.css">
+    </head>
+    <body>
+        <div id="header-holder">
+            <div id="header">
+                <a id="riot-logo" href="https://www.riotgames.com/en">
+                    <img id="logo-wht" src="E:\Viktor kursevi\Projects\assets\RiotLogo.png" alt="Riot Logo">
+                    <img id="logo-red" src="E:\Viktor kursevi\Projects\assets\RiotLogoRed.png" alt="Riot Logo">
+                </a>
+                
+                <div id="themes">
+                    <div id="about-us">
+                        <a id="about-us-txt" href="E:\Viktor kursevi\Projects\Riot-website\about-us.html">ABOUT THEM</a>
+                    </div>
+                    <div id="products">
+                        <a id="products-txt" href="E:\Viktor kursevi\Projects\Riot-website\our-products.html">THEIR PRODUCTS</a>
+                    </div>
+                    
+                </div>
+                
+                <div id="social-medias">
+                    <a href="https://www.youtube.com/@riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\YoutubeIcon.png" alt="Youtube">
+                    </a>
+                    <a href="https://www.instagram.com/riotgames/">
+                        <img src="E:\Viktor kursevi\Projects\assets\InstagramLogoBlack.png" alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com/riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\TwitterLogo.png" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+
+            <div id="popup-aboutus">
+                <a href="history.html">History</a><br><br>
+                <a href="offices.html">Offices</a>
+            </div>
+            <div id="popup-products">
+                <a href="games.html">Games</a><br><br>
+                <a href="music.html">Music</a><br><br>
+                <a href="movie.html">Movie</a>
+            </div>
+        </div>
+
+        <!-- Sadrzaj -->
+        <!-- MultyPly Games-->
+
+        <div id="games-header">
+            <p>Riot's Games</p>
+        </div>
+
+        <div id="multy-games">
+            <p id="multy-holder">Multyplayer Games</p>
+
+            <div id="multy-select">
+                <div id="lol">
+                    <a id="lol-header" class="main-header">League <br> of <br> Legends</a>
+                    <div id="lol-txt">
+                        <h2>Legue  of  Legends</h2>
+
+                        <p>A 5v5 MOBA with 5 different roles in a team. 
+                            It has 167 characters that give the game a lot of diversity between matches
+                            It has the biggest e-sports events and its in constantly in the top 5 most streamed games on Twitch.
+                        </p>
+                    </div>
+                </div>
+                <div id="val">
+                    <a id="val-header" class="main-header">Valorant</a>
+                    <div id="val-txt">
+                        <h2>Valorant</h2>
+
+                        <p>A 5v5 first-person shooter. Its a search and destroy game where one team attacks and one deffendrs.
+                            It has 22 characters with unique abilities, and 13 maps.
+                        </p>
+                    </div>
+                </div>
+                <div id="tft">
+                    <a id="tft-header" class="main-header">TeamFight <br> Tactics</a>
+                    <div id="tft-txt">
+                        <h2>TeamFight Tactics</h2>
+
+                        <p>A strategic free-for-all auto-battler, 
+                            where u build ur team and fight with other people trying to be the last one standing</p>
+                    </div>
+                </div>
+                <div id="runet">
+                    <a id="runet-header" class="main-header">Legends <br> of <br> Runeterra</a>
+                    <div id="runet-txt">
+                        <h2>Legends of Runeterra</h2>
+
+                        <p>A digital collectible card game, where u fight a other player with ur deck of cards.
+                             The cards are cherecters from League of Legends universe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riot Forge -->
+
+        <div id="forge">
+            <p id="forge-header">Riot Forge</p>
+
+            <p id="forge-txt">Riot Forge is a team of Riot employees, 
+                that make singleplayer games in League of Legends universe
+            </p>
+
+            <div id="forge-holder">
+                <div  id="btn-left">
+                    <a id="link-left">
+                        <img src="E:\Viktor kursevi\Projects\assets\ArrowLeft.png" alt="ArrLeft">
+                    </a>
+                </div>
+                <div id="forge-games">
+                    
+                </div>
+                <div id="btn-right">
+                    <a id="link-right">
+                        <img src="E:\Viktor kursevi\Projects\assets\ArrowRight.png" alt="ArrRight">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var aboutUs = document.getElementById('about-us');
+            aboutUs.addEventListener("mouseover",AUshowPopup, "false");
+            aboutUs.addEventListener("mouseout",AUhidePopup, "false");
+
+            var aboutUsTxt = document.getElementById('about-us-txt');
+
+            var aboutUsPopup = document.getElementById('popup-aboutus');
+            aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
+            aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
+
+            
+
+            var products = document.getElementById('products');
+            products.addEventListener("mouseover",PshowPopup, "false");
+            products.addEventListener("mouseout",PhidePopup, "false");
+
+            var productsTxt = document.getElementById('products-txt');
+
+            var productsPopup = document.getElementById('popup-products');
+            productsPopup.addEventListener("mouseover",PshowPopup, "false")
+            productsPopup.addEventListener("mouseout",PhidePopup, "false");
+
+
+            function AUshowPopup(){
+                aboutUsPopup.style.display = 'block';
+                aboutUsTxt.style.color = 'red';
+            }
+            function AUhidePopup(){
+                aboutUsPopup.style.display = 'none';
+                aboutUsTxt.style.color = 'white';
+            }
+            function PshowPopup(){
+               productsPopup.style.display = 'block';
+               productsTxt.style.color = 'red';
+            }
+            function PhidePopup(){
+                productsPopup.style.display = 'none';
+                productsTxt.style.color = 'white';
+            }
+
+            //Sadrzaj
+            //C MultyPly games
+
+            var multySelect = document.getElementById("multy-select");
+
+            var lolh = document.getElementById("lol-header");
+            lolh.addEventListener("click", LolChange, "false");
+            var loltxt = document.getElementById("lol-txt");
+            var lolHold = document.getElementById("lol");
+
+            var valh = document.getElementById("val-header");
+            valh.addEventListener("click", ValChange, "false");
+            var valtxt = document.getElementById("val-txt");
+            var valHold = document.getElementById("val");
+
+            var tfth = document.getElementById("tft-header");
+            tfth.addEventListener("click", TftChange, "false");
+            var tfttxt = document.getElementById("tft-txt");
+            var tftHold = document.getElementById("tft");
+
+            var runeth = document.getElementById("runet-header");
+            runeth.addEventListener("click", RunetChange, "false");
+            var runettxt = document.getElementById("runet-txt");
+            var runetHold = document.getElementById("runet");
+
+
+            function LolChange(){
+                lolh.style.display = "none";
+                lolHold.style.paddingTop = "300px";
+                lolHold.style.width = "600px"
+                loltxt.style.display = "block"
+                multySelect.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/LolBG.png')";
+
+
+                valh.style.display = "inline";
+                valHold.style.paddingTop = "400px";
+                valHold.style.width = "400px"
+                valtxt.style.display = "none"
+
+                tfth.style.display = "inline";
+                tftHold.style.paddingTop = "400px";
+                tftHold.style.width = "400px"
+                tfttxt.style.display = "none"
+
+                runeth.style.display = "inline";
+                runetHold.style.paddingTop = "400px";
+                runetHold.style.width = "400px"
+                runettxt.style.display = "none"
+            }
+            function ValChange(){
+                valh.style.display = "none";
+                valHold.style.paddingTop = "300px";
+                valHold.style.width = "600px"
+                valtxt.style.display = "block"
+                multySelect.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/ValBG.png')";
+
+                lolh.style.display = "inline";
+                lolHold.style.paddingTop = "400px";
+                lolHold.style.width = "400px"
+                loltxt.style.display = "none"
+
+                tfth.style.display = "inline";
+                tftHold.style.paddingTop = "400px";
+                tftHold.style.width = "400px"
+                tfttxt.style.display = "none"
+
+                runeth.style.display = "inline";
+                runetHold.style.paddingTop = "400px";
+                runetHold.style.width = "400px"
+                runettxt.style.display = "none"
+            }
+
+            function TftChange(){
+                tfth.style.display = "none";
+                tftHold.style.paddingTop = "300px";
+                tftHold.style.width = "600px"
+                tfttxt.style.display = "block"
+                multySelect.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/TftBG.png')";
+
+                lolh.style.display = "inline";
+                lolHold.style.paddingTop = "400px";
+                lolHold.style.width = "400px"
+                loltxt.style.display = "none"
+
+                valh.style.display = "inline";
+                valHold.style.paddingTop = "400px";
+                valHold.style.width = "400px"
+                valtxt.style.display = "none"
+
+                runeth.style.display = "inline";
+                runetHold.style.paddingTop = "400px";
+                runetHold.style.width = "400px"
+                runettxt.style.display = "none"
+            }
+
+            function RunetChange(){
+                runeth.style.display = "none";
+                runetHold.style.paddingTop = "300px";
+                runetHold.style.width = "600px"
+                runettxt.style.display = "block"
+                multySelect.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/RunetBG.png')";
+
+                lolh.style.display = "inline";
+                lolHold.style.paddingTop = "400px";
+                lolHold.style.width = "400px"
+                loltxt.style.display = "none"
+
+                valh.style.display = "inline";
+                valHold.style.paddingTop = "400px";
+                valHold.style.width = "400px"
+                valtxt.style.display = "none"
+
+                tfth.style.display = "inline";
+                tftHold.style.paddingTop = "400px";
+                tftHold.style.width = "400px"
+                tfttxt.style.display = "none"
+            }
+
+            //Riot Forge
+            
+            var btnRight = document.getElementById("link-right");
+            btnRight.addEventListener("click", ImgUp, "false");
+
+            var btnLeft = document.getElementById("link-left");
+            btnLeft.addEventListener("click", ImgDown, "false");
+
+            var forgeGames = document.getElementById("forge-games");
+
+            var currentImg = 1; 
+            BackgroundChange();
+
+            function ImgUp(){
+                if(currentImg == 6){
+                    currentImg = 1;
+                    BackgroundChange();
+                }else{
+                    currentImg++;
+                    BackgroundChange();
+                }   
+            }
+            function ImgDown(){
+                if(currentImg == 1){
+                    currentImg = 6;
+                    BackgroundChange();
+                }else{
+                    currentImg--;
+                    BackgroundChange();
+                }   
+            }
+
+            function BackgroundChange(){
+                if(currentImg == 1){
+                    forgeGames.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/RuinedKing.png')";
+                }
+                if(currentImg == 2){
+                    forgeGames.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Hex.png')";
+                }
+                if(currentImg == 3){
+                    forgeGames.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Conv.png')";
+                }
+                if(currentImg == 4){
+                    forgeGames.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/SongOfNunu.png')";
+                }
+                if(currentImg == 5){
+                    forgeGames.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/MageSeeker.png')";
+                }
+                if(currentImg == 6){
+                    forgeGames.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/BandleTale.png')";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,179 @@
+body{
+    margin: 0;
+}
+
+#header-holder{
+    width: 100%;
+    position: fixed;
+}
+
+#header{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #000000;
+}
+
+#header  img{
+    height: 100%;
+    background: transparent;
+}
+
+#logo-wht{
+    display: block;
+}
+#logo-red{
+    display: none;
+}
+#riot-logo:hover > #logo-wht{
+    display: none;
+}
+#riot-logo:hover > #logo-red{
+    display: block;
+}
+
+#themes{
+    flex-grow: 1;
+    display: flex;
+    font-family: arial;
+}
+
+#themes div{
+    flex-grow: auto;
+}
+
+#themes div a{
+    font-size: 24px;
+    position: relative;
+    top: 35%;
+    margin: 0px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+#social-medias{
+    display: block;
+    flex-grow: 1;
+    text-align: right;
+}
+
+#social-medias a{
+    text-decoration: none;
+}
+
+#social-medias a img{
+    margin: 5px 3px;
+    height: 28px;
+    width: 28px;
+}
+
+#popup-aboutus{
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid red;
+    width: 200px;
+    height: auto;
+    margin-left: 200px;
+}
+
+#popup-aboutus a{
+    justify-self: center;
+    color: rgb(212, 210, 210);
+    font-size: 28px;
+    margin: 20px 20px;
+    text-decoration: none;
+}
+
+#popup-products{
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid red;
+    width: 220px;
+    height: auto;
+    margin-left: 410px;
+}
+
+#popup-products a{
+    justify-self: center;
+    color: rgb(212, 210, 210);
+    font-size: 28px;
+    margin: 20px 15px;
+    text-decoration: none;
+}
+
+#content-holder{
+    width: 100%;
+    height: 100vh;
+}
+
+#drzava{
+    display: grid;
+    grid-template: "lt txt rt";
+    grid-template-columns: 100px 1fr 100px;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-size: cover;
+    transition: 700ms;
+}
+#place-name{
+    grid-area: txt;
+}
+
+
+#drzava p{
+    font-size: 94px;
+    font-weight: bold;
+    margin-top: 250px;
+    color: white;
+}
+
+#btn-left{
+    position: relative;
+    z-index: 1;
+    grid-area: lt;
+    width: 100px;
+    height: 100%;
+    background-color: #00000013;
+}
+#btn-left img{
+    display: block;
+    margin-top: 450px;
+    height: 80px;
+    width: 110px;
+}
+
+
+#btn-right{
+    position: relative;
+    z-index: 1;
+    grid-area: rt;
+    width: 100px;
+    height: 100%;
+    background-color: #00000013;
+}
+#btn-right img{
+    display: block;
+    margin-top: 450px;
+    height: 80px;
+    width: 80px;
+}
+#btn-left:hover{
+    transition: 500ms;
+    background-color: #25252583;
+}
+#btn-right:hover{
+    transition: 500ms;
+    background-color: #25252583;
+}
+
+#link-left img:hover{
+    cursor: pointer;
+}
+#link-right img:hover{
+    cursor: pointer;
+}

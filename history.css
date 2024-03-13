@@ -1,0 +1,211 @@
+body{
+    margin: 0;
+}
+
+#header-holder{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+}
+
+#header{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #000000;
+}
+
+#header  img{
+    height: 100%;
+    background: transparent;
+}
+
+#logo-wht{
+    display: block;
+}
+#logo-red{
+    display: none;
+}
+#riot-logo:hover > #logo-wht{
+    display: none;
+}
+#riot-logo:hover > #logo-red{
+    display: block;
+}
+
+#themes{
+    flex-grow: 1;
+    display: flex;
+    font-family: arial;
+}
+
+#themes div{
+    flex-grow: auto;
+}
+
+#themes div a{
+    font-size: 24px;
+    position: relative;
+    top: 35%;
+    margin: 0px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+#social-medias{
+    display: block;
+    flex-grow: 1;
+    text-align: right;
+}
+
+#social-medias a{
+    text-decoration: none;
+}
+
+#social-medias a img{
+    margin: 5px 3px;
+    height: 28px;
+    width: 28px;
+}
+
+#popup-aboutus{
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid red;
+    width: 200px;
+    height: auto;
+    margin-left: 200px;
+}
+
+#popup-aboutus a{
+    justify-self: center;
+    color: rgb(212, 210, 210);
+    font-size: 28px;
+    margin: 10px 15px;
+    text-decoration: none;
+}
+
+#popup-products{
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid red;
+    width: 220px;
+    height: auto;
+    margin-left: 410px;
+}
+
+#popup-products a{
+    justify-self: center;
+    color: rgb(212, 210, 210);
+    font-size: 28px;
+    margin: 25px 15px;
+    text-decoration: none;
+}
+
+/*Sadrzaj*/
+
+#site{
+    width: 3300px;
+    height: 98vh;
+}
+
+#text{
+    position: relative;
+    z-index: 0;
+    height: 480px;
+    width: 1700px;
+    padding: 20px;
+    margin: 120px 70px;
+    padding-top: 70px;
+    text-align: center;
+    position: fixed;
+    border: 5px dashed grey;
+}
+
+#text p{
+    display: none;
+    font-size: 31px;
+}
+
+#timeline-holder{
+    padding-top: 750px;
+}
+
+#timeline{
+    background-color: rgb(61, 174, 219);
+    height: 20px;
+    margin: 0px 50px;
+    border-radius: 5px;
+}
+
+#year-line-holder{
+    display: flex;
+}
+
+
+.year-line{
+    width: 20px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(61, 174, 219);
+}
+
+#line-2006{
+    margin-left: 50px;
+}
+
+#timeline a{
+    font-size: 42px;
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#t2006{
+    margin-left: 15px;
+}
+
+#holder-2009{
+    margin-left: 500px;
+}
+#line-2009{
+    margin-left: 40%;
+}
+
+#holder-2011{
+    margin-left: 500px;
+}
+#line-2011{
+    margin-left: 40%;
+}
+
+#holder-2018{
+    margin-left: 500px;
+}
+#line-2018{
+    margin-left: 40%;
+}
+
+#holder-2019{
+    margin-left: 500px;
+}
+#line-2019{
+    margin-left: 40%;
+}
+
+#holder-2021{
+    margin-left: 500px;
+}
+#line-2021{
+    margin-left: 40%;
+}
+
+.year-btn:hover{
+    cursor: pointer;
+}

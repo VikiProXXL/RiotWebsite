@@ -1,0 +1,266 @@
+body{
+    margin: 0;
+}
+
+#header-holder{
+    width: 100%;
+    position: fixed;
+}
+
+#header{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #000000;
+}
+
+#header  img{
+    height: 100%;
+    background: transparent;
+}
+
+#logo-wht{
+    display: block;
+}
+#logo-red{
+    display: none;
+}
+#riot-logo:hover > #logo-wht{
+    display: none;
+}
+#riot-logo:hover > #logo-red{
+    display: block;
+}
+
+#themes{
+    flex-grow: 1;
+    display: flex;
+    font-family: arial;
+}
+
+#themes div{
+    flex-grow: auto;
+}
+
+#themes div a{
+    font-size: 24px;
+    position: relative;
+    top: 35%;
+    margin: 0px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+#social-medias{
+    display: block;
+    flex-grow: 1;
+    text-align: right;
+}
+
+#social-medias a{
+    text-decoration: none;
+}
+
+#social-medias a img{
+    margin: 5px 3px;
+    height: 28px;
+    width: 28px;
+}
+
+#popup-aboutus{
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid red;
+    width: 200px;
+    height: auto;
+    margin-left: 200px;
+}
+
+#popup-aboutus a{
+    justify-self: center;
+    color: rgb(212, 210, 210);
+    font-size: 28px;
+    margin: 20px 20px;
+    text-decoration: none;
+}
+
+#popup-products{
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid red;
+    width: 220px;
+    height: auto;
+    margin-left: 410px;
+}
+
+#popup-products a{
+    justify-self: center;
+    color: rgb(212, 210, 210);
+    font-size: 28px;
+    margin: 20px 15px;
+    text-decoration: none;
+}
+
+/* Sadrzaj */
+
+#games-header{
+    font-family: Arial;
+    width: 100%;
+    height: 290px;
+    padding-top: 110px;
+    text-align: center;
+    background: url("E:/Viktor kursevi/Projects/assets/RiotAllGames.png");
+    background-size: cover;
+}
+
+#games-header p{
+    font-size: 70px;
+    color: white;
+}
+
+#multy-games{
+    padding-top: 200px;
+}
+#multy-games > p{
+    text-align: center;
+    font-size: 50px;
+    margin: 0px;
+}
+
+#multy-select{
+    display: flex;
+    width: 100%;
+    height: 800px;
+    margin-top: 80px;
+    background-image: url("E:/Viktor kursevi/Projects/assets/Esports.png");
+    background-size: cover;
+    transition: 500ms;
+}
+#multy-select > div{
+    padding: 0px 40px;
+    padding-top: 400px;
+    text-align: center;
+}
+#multy-select > div > div{
+    display: none;
+}
+#multy-select > div > div > p{
+    font-size: 31px;
+}
+#multy-select h2{
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+#lol{
+    flex-grow: 1;
+    color: white;
+    border: 1px solid rgb(116, 116, 116);
+}
+#lol-txt{
+    background-color: #00000071;
+    border-radius: 10px;
+}
+
+#val{
+    flex-grow: 1;
+    color: white;
+    border: 1px solid rgb(116, 116, 116);
+}
+#val-txt{
+    background-color: #00000071;
+    border-radius: 10px;
+}
+
+#tft{
+    flex-grow: 1;
+    color: white;
+    border: 1px solid rgb(116, 116, 116);
+}
+#tft-txt{
+    background-color: #00000071;
+    border-radius: 10px;
+}
+
+#runet{
+    flex-grow: 1;
+    color: white;
+    border: 1px solid rgb(116, 116, 116);
+}
+#runet-txt{
+    background-color: #00000071;
+    border-radius: 10px;
+}
+
+.main-header{
+    font-size: 50px;
+    border-radius: 10px;
+    color: white;
+    background-color: #29292994;
+}
+.main-header:hover{
+    cursor: pointer;
+}
+
+/*Riot Forge*/
+
+#forge{
+    margin-top: 150px;
+    text-align: center;
+}
+
+#forge-header{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#forge-txt{
+    margin-top: 0px;
+    font-size: 30px;
+}
+
+#forge-holder{
+    display: grid;
+    grid-template: "lt pc rt";
+    grid-template-columns: 100px 1fr 100px;
+    height: 700px;
+    width: 1400px;
+    margin-left: 300px;
+    margin-bottom: 80px;
+}
+
+#btn-left{
+    grid-area: lt;
+    height: 100%;
+}
+#link-left img{
+    margin-top: 350px;
+    height: 80px;
+    width: 110px;
+}
+#link-left img:hover{
+    cursor: pointer;
+}
+#btn-right{
+    grid-area: rt;
+    height: 100%;
+}
+#link-right img{
+    margin-top: 350px;
+    height: 80px;
+    width: 80px;
+}
+#link-right img:hover{
+    cursor: pointer;
+}
+#forge-games{
+    grid-area: pc;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    transition: 300ms;
+}

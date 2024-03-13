@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Offices</title>
+        <meta chatset="utf-8">
+        <link rel="stylesheet" href="offices.css">
+    </head>
+    <body>
+        <div id="header-holder">
+            <div id="header">
+                <a id="riot-logo" href="https://www.riotgames.com/en">
+                    <img id="logo-wht" src="E:\Viktor kursevi\Projects\assets\RiotLogo.png" alt="Riot Logo">
+                    <img id="logo-red" src="E:\Viktor kursevi\Projects\assets\RiotLogoRed.png" alt="Riot Logo">
+                </a>
+                
+                <div id="themes">
+                    <div id="about-us">
+                        <a id="about-us-txt" href="E:\Viktor kursevi\Projects\Riot-website\about-us.html">ABOUT THEM</a>
+                    </div>
+                    <div id="products">
+                        <a id="products-txt" href="E:\Viktor kursevi\Projects\Riot-website\our-products.html">THEIR PRODUCTS</a>
+                    </div>
+                    
+                </div>
+                
+                <div id="social-medias">
+                    <a href="https://www.youtube.com/@riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\YoutubeIcon.png" alt="Youtube">
+                    </a>
+                    <a href="https://www.instagram.com/riotgames/">
+                        <img src="E:\Viktor kursevi\Projects\assets\InstagramLogoBlack.png" alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com/riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\TwitterLogo.png" alt="Twitter">
+                    </a>
+                </div>
+                
+            </div>
+
+            <div id="popup-aboutus">
+                <a href="history.html">History</a><br><br>
+                <a href="offices.html">Offices</a>
+            </div>
+            <div id="popup-products">
+                <a href="games.html">Games</a><br><br>
+                <a href="music.html">Music</a><br><br>
+                <a href="movie.html">Movie</a>
+            </div>
+        </div>
+        
+        <!--sadrzaj-->
+        <div id="content-holder">
+            <div id="drzava">
+
+                <p id="place-name"></p>
+
+                <div  id="btn-left">
+                    <a id="link-left">
+                        <img src="E:\Viktor kursevi\Projects\assets\ArrowLeft.png" alt="ArrLeft">
+                    </a>
+                </div>
+                <div id="btn-right">
+                    <a id="link-right">
+                        <img src="E:\Viktor kursevi\Projects\assets\ArrowRight.png" alt="ArrRight">
+                    </a>
+                </div>
+        
+            </div>
+        </div>
+
+        <script>
+            var aboutUs = document.getElementById('about-us');
+            aboutUs.addEventListener("mouseover",AUshowPopup, "false");
+            aboutUs.addEventListener("mouseout",AUhidePopup, "false");
+
+            var aboutUsTxt = document.getElementById('about-us-txt');
+
+            var aboutUsPopup = document.getElementById('popup-aboutus');
+            aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
+            aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
+
+            
+
+            var products = document.getElementById('products');
+            products.addEventListener("mouseover",PshowPopup, "false");
+            products.addEventListener("mouseout",PhidePopup, "false");
+
+            var productsTxt = document.getElementById('products-txt');
+
+            var productsPopup = document.getElementById('popup-products');
+            productsPopup.addEventListener("mouseover",PshowPopup, "false")
+            productsPopup.addEventListener("mouseout",PhidePopup, "false");
+
+
+            function AUshowPopup(){
+                aboutUsPopup.style.display = 'block';
+                aboutUsTxt.style.color = 'red';
+            }
+            function AUhidePopup(){
+                aboutUsPopup.style.display = 'none';
+                aboutUsTxt.style.color = 'white';
+            }
+            function PshowPopup(){
+               productsPopup.style.display = 'block';
+               productsTxt.style.color = 'red';
+            }
+            function PhidePopup(){
+                productsPopup.style.display = 'none';
+                productsTxt.style.color = 'white';
+            }
+
+            //Promjene mjesta
+            var places = ["San Francisco, USA", "Seoul, Korea", "Barcelona, Spain", "Bellevue, USA", "Sao Paulo, Brazil", "Dubai, United Arab Emirates", "Syndey, Australia", "Los Angeles, USA", "Paris, France", "Stockholm, Sweden", "Dublin, Irland", "Berlin, Germany", "Singapore", "Istanbul, Turkey"];
+            var placeBkg = ["E:/Viktor kursevi/Projects/assets/SanFrancisco.png", "E:/Viktor kursevi/Projects/assets/Seoul.png", "E:/Viktor kursevi/Projects/assets/Barcelona.png"];
+            var currentPlace = 0;
+
+            var placeName = document.getElementById("place-name");
+            placeName.innerText = places[currentPlace];
+
+            var btnRight = document.getElementById("link-right");
+            btnRight.addEventListener("click", PlaceUp, "false");
+
+            var btnLeft = document.getElementById("link-left");
+            btnLeft.addEventListener("click", PlaceDown, "false");
+
+            var drzava = document.getElementById("drzava");
+
+            BackgroundChange();
+
+            function PlaceUp(){
+                if(currentPlace == places.length-1){
+                    currentPlace = 0;
+                    placeName.innerText = places[currentPlace];
+                    BackgroundChange()
+                }else{
+                    currentPlace++;
+                    placeName.innerText = places[currentPlace];
+                    BackgroundChange()
+                }
+                
+            }
+
+            function PlaceDown(){
+                if(currentPlace==0){
+                    currentPlace = places.length-1;
+                    placeName.innerText = places[currentPlace];
+                    BackgroundChange();
+                }else{
+                    currentPlace--;
+                    placeName.innerText = places[currentPlace];
+                    BackgroundChange();
+                }
+
+            }
+
+            function BackgroundChange(){
+                if(currentPlace == 0){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/SanFrancisco.png')";
+                }
+                if(currentPlace == 1){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Seoul.png')";
+                }
+                if(currentPlace == 2){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Barcelona.png')";
+                }
+                if(currentPlace == 3){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Bellevue.png')";
+                }
+                if(currentPlace == 4){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/SaoPaulo.png')";
+                }
+                if(currentPlace == 5){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Dubai.png')";
+                }
+                if(currentPlace == 6){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Sydney.png')";
+                }
+                if(currentPlace == 7){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/LosAngeles.png')";
+                }
+                if(currentPlace == 8){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Paris.png')";
+                }
+                if(currentPlace == 9){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Stockholm.png')";
+                }
+                if(currentPlace == 10){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Dublin.png')";
+                }
+                if(currentPlace == 11){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Berlin.png')";
+                }
+                if(currentPlace == 12){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Singapore.png')";
+                }
+                if(currentPlace == 13){
+                    drzava.style.backgroundImage = "url('E:/Viktor kursevi/Projects/assets/Istanbul.png')";
+                }
+            }
+            
+        </script>
+    </body>
+</html>

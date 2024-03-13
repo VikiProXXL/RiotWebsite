@@ -1,0 +1,241 @@
+body{
+    margin: 0;
+}
+
+#header-holder{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+}
+
+#header{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #000000;
+}
+
+#header  img{
+    height: 100%;
+    background: transparent;
+}
+
+#logo-wht{
+    display: block;
+}
+#logo-red{
+    display: none;
+}
+#riot-logo:hover > #logo-wht{
+    display: none;
+}
+#riot-logo:hover > #logo-red{
+    display: block;
+}
+
+#themes{
+    flex-grow: 1;
+    display: flex;
+    font-family: arial;
+}
+
+#themes div{
+    flex-grow: auto;
+}
+
+#themes div a{
+    font-size: 24px;
+    position: relative;
+    top: 35%;
+    margin: 0px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+#social-medias{
+    display: block;
+    flex-grow: 1;
+    text-align: right;
+}
+
+#social-medias a{
+    text-decoration: none;
+}
+
+#social-medias a img{
+    margin: 5px 3px;
+    height: 28px;
+    width: 28px;
+}
+
+#popup-aboutus{
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid red;
+    width: 200px;
+    height: auto;
+    margin-left: 200px;
+}
+
+#popup-aboutus a{
+    justify-self: center;
+    color: rgb(212, 210, 210);
+    font-size: 28px;
+    margin: 10px 15px;
+    text-decoration: none;
+}
+
+#popup-products{
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgb(41, 41, 41);
+    border-top: 3px solid red;
+    width: 220px;
+    height: auto;
+    margin-left: 410px;
+}
+
+#popup-products a{
+    justify-self: center;
+    color: rgb(212, 210, 210);
+    font-size: 28px;
+    margin: 25px 15px;
+    text-decoration: none;
+}
+
+/*Sadrzaj*/
+
+#stranica{
+    padding: 0px 300px;
+    background: url("E:/Viktor kursevi/Projects/assets/SummonersRift.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#sadrzaj{
+    height: auto;
+}
+
+#sadrzaj a{
+    font-weight: bold;
+}
+
+#products-header{
+    text-align: center;
+    height: 300px;
+    padding-top: 100px;
+    background: url("E:/Viktor kursevi/Projects/assets/Header.png");
+    background-size: cover ;
+
+}
+#products-header p{
+    color: white;
+    font-size: 84px;
+}
+
+
+#games{
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    height: 550px;
+    background-color: white;
+}
+#games div{
+    flex-grow: 1;
+    margin-left: 50px;
+}
+#games img{
+    flex-grow: 1;
+    margin-right: 50px;
+    height: 500px;
+    width: 600px;
+}
+#games-holder{
+    margin-right: 50px;
+    text-align: center;
+}
+#games-header{
+    margin-bottom: 30px;
+    font-size: 31px;
+    text-decoration: none;
+    color: black;
+}
+#games-header:hover{
+    text-decoration: underline;
+}
+#games-txt{
+    font-size: 24px;
+}
+
+#music{
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    height: 550px;
+    background-color: white;
+}
+#music div{
+    flex-grow: 1;
+    margin-right: 50px;
+}
+#music img{
+    flex-grow: 1;
+    margin-left: 50px;
+    height: 500px;
+    width: 400px;
+}
+#music-holder{
+    margin-right: 50px;
+    text-align: center;
+}
+#music-header{
+    margin-bottom: 30px;
+    font-size: 31px;
+    text-decoration: none;
+    color: black;
+}
+#music-header:hover{
+    text-decoration: underline;
+}
+#music-txt{
+    font-size: 24px;
+}
+
+#movie{
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    height: 550px;
+    background-color: white;
+}
+#movie div{
+    flex-grow: 1;
+    margin-left: 50px;
+}
+#movie img{
+    flex-grow: 1;
+    margin-right: 50px;
+    height: 500px;
+    width: 700px;
+}
+#movie-holder{
+    margin-right: 50px;
+    text-align: center;
+}
+#movie-header{
+    margin-bottom: 30px;
+    font-size: 31px;
+    text-decoration: none;
+    color: black;
+}
+#movie-header:hover{
+    text-decoration: underline;
+}
+#movie-txt{
+    font-size: 24px;
+}

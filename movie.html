@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie series</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="movie.css">
+    </head>
+    <body>
+        <div id="header-holder">
+            <div id="header">
+                <a id="riot-logo" href="https://www.riotgames.com/en">
+                    <img id="logo-wht" src="E:\Viktor kursevi\Projects\assets\RiotLogo.png" alt="Riot Logo">
+                    <img id="logo-red" src="E:\Viktor kursevi\Projects\assets\RiotLogoRed.png" alt="Riot Logo">
+                </a>
+                
+                <div id="themes">
+                    <div id="about-us">
+                        <a id="about-us-txt" href="E:\Viktor kursevi\Projects\Riot-website\about-us.html">ABOUT THEM</a>
+                    </div>
+                    <div id="products">
+                        <a id="products-txt" href="E:\Viktor kursevi\Projects\Riot-website\our-products.html">THEIR PRODUCTS</a>
+                    </div>
+                    
+                </div>
+                
+                <div id="social-medias">
+                    <a href="https://www.youtube.com/@riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\YoutubeIcon.png" alt="Youtube">
+                    </a>
+                    <a href="https://www.instagram.com/riotgames/">
+                        <img src="E:\Viktor kursevi\Projects\assets\InstagramLogoBlack.png" alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com/riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\TwitterLogo.png" alt="Twitter">
+                    </a>
+                </div>
+                
+            </div>
+
+            <div id="popup-aboutus">
+                <a href="history.html">History</a><br><br>
+                <a href="offices.html">Offices</a>
+            </div>
+            <div id="popup-products">
+                <a href="games.html">Games</a><br><br>
+                <a href="music.html">Music</a><br><br>
+                <a href="movie.html">Movie</a>
+            </div>
+        </div>
+
+        <!-- Sadrzaj -->
+
+        <div id="movie-header">
+            <img src="E:/Viktor kursevi/Projects/assets/ArcaneTxt.png" alt="">
+        </div>
+
+        <div id="content">
+            <div id="content-holder">
+                <img src="E:/Viktor kursevi/Projects/assets/ArcanePoster.png" alt="">
+
+                <div id="stats">
+                    <div>Animation</div>
+                    <div>Action</div>
+                    <div>Advanture</div>
+                </div>
+
+                <p id="content-txt">-An animated steampunk action-adventure television series <br> <br>
+                                    -Set in League of Legends universe <br> <br>
+                                    -It has 9 episodes <br> <br>
+                                    🏆 It got 9/10 on <a id="imdb" href="https://www.imdb.com/title/tt11126994/?ref_=tt_mv_close">IMDb</a> and 9.4/10 on <a id="netflix" href="https://www.netflix.com/ba-hr/title/81435684">Netflix</a> <br> <br>
+                                    🏆 It set the record as Netflix's highest-rated series at the time within a week of its premiere <br> <br>
+                                    🏆it was ranked first on the Netflix Top 10 Chart in 52 countries, and ranked second on the chart in the United States</p>
+            </div>
+        </div>
+
+        <script>
+            var aboutUs = document.getElementById('about-us');
+            aboutUs.addEventListener("mouseover",AUshowPopup, "false");
+            aboutUs.addEventListener("mouseout",AUhidePopup, "false");
+
+            var aboutUsTxt = document.getElementById('about-us-txt');
+
+            var aboutUsPopup = document.getElementById('popup-aboutus');
+            aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
+            aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
+
+            
+
+            var products = document.getElementById('products');
+            products.addEventListener("mouseover",PshowPopup, "false");
+            products.addEventListener("mouseout",PhidePopup, "false");
+
+            var productsTxt = document.getElementById('products-txt');
+
+            var productsPopup = document.getElementById('popup-products');
+            productsPopup.addEventListener("mouseover",PshowPopup, "false")
+            productsPopup.addEventListener("mouseout",PhidePopup, "false");
+
+
+            function AUshowPopup(){
+                aboutUsPopup.style.display = 'block';
+                aboutUsTxt.style.color = 'red';
+            }
+            function AUhidePopup(){
+                aboutUsPopup.style.display = 'none';
+                aboutUsTxt.style.color = 'white';
+            }
+            function PshowPopup(){
+               productsPopup.style.display = 'block';
+               productsTxt.style.color = 'red';
+            }
+            function PhidePopup(){
+                productsPopup.style.display = 'none';
+                productsTxt.style.color = 'white';
+            }
+        </script>
+    </body>
+</html>

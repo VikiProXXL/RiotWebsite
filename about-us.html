@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About us</title>
+        <meta chatset="utf-8">
+        <link rel="stylesheet" href="about-us.css">
+    </head>
+    <body>
+        <div id="header-holder">
+            <div id="header">
+                <a id="riot-logo" href="https://www.riotgames.com/en">
+                    <img id="logo-wht" src="E:\Viktor kursevi\Projects\assets\RiotLogo.png" alt="Riot Logo">
+                    <img id="logo-red" src="E:\Viktor kursevi\Projects\assets\RiotLogoRed.png" alt="Riot Logo">
+                </a>
+                
+                <div id="themes">
+                    <div id="about-us">
+                        <a id="about-us-txt" href="E:\Viktor kursevi\Projects\Riot-website\about-us.html">ABOUT THEM</a>
+                    </div>
+                    <div id="products">
+                        <a id="products-txt" href="E:\Viktor kursevi\Projects\Riot-website\our-products.html">THEIR PRODUCTS</a>
+                    </div>
+                    
+                </div>
+                
+                <div id="social-medias">
+                    <a href="https://www.youtube.com/@riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\YoutubeIcon.png" alt="Youtube">
+                    </a>
+                    <a href="https://www.instagram.com/riotgames/">
+                        <img src="E:\Viktor kursevi\Projects\assets\InstagramLogoBlack.png" alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com/riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\TwitterLogo.png" alt="Twitter">
+                    </a>
+                </div>
+                
+            </div>
+
+            <div id="popup-aboutus">
+                <a href="history.html">History</a><br><br>
+                <a href="offices.html">Offices</a>
+            </div>
+            <div id="popup-products">
+                <a href="games.html">Games</a><br><br>
+                <a href="music.html">Music</a><br><br>
+                <a href="movie.html">Movie</a>
+            </div>
+
+        </div>
+        <!--Iznad je HEADER-->
+
+        <div id="aboutus-header">
+            <div id="header-content">
+                <p>ABOUT THEM</p>
+            </div>
+        </div>
+
+        <div id="sadrzaj">
+            <p>Riot Games, Inc. is an American video game developer,
+                 publisher, and esports tournament organizer based in Los Angeles, California.</p>
+                 <p>Originaly made a game called League of Legend 
+                    and after its success made more popular games</p>
+                <p>They are not only popular for their games but also for 
+                    their movie series, e-sports events and even music</p>
+                <p>Riot Games is acquired by Chinese conglomerate Tencent.</p>
+        </div>
+
+        
+        
+
+        <script>
+
+            //Showing and hiding of Themes
+            //ispod je HEADER
+            var aboutUs = document.getElementById('about-us');
+            aboutUs.addEventListener("mouseover",AUshowPopup, "false");
+            aboutUs.addEventListener("mouseout",AUhidePopup, "false");
+
+            var aboutUsTxt = document.getElementById('about-us-txt');
+
+            var aboutUsPopup = document.getElementById('popup-aboutus');
+            aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
+            aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
+
+            
+
+            var products = document.getElementById('products');
+            products.addEventListener("mouseover",PshowPopup, "false");
+            products.addEventListener("mouseout",PhidePopup, "false");
+
+            var productsTxt = document.getElementById('products-txt');
+
+            var productsPopup = document.getElementById('popup-products');
+            productsPopup.addEventListener("mouseover",PshowPopup, "false")
+            productsPopup.addEventListener("mouseout",PhidePopup, "false");
+
+
+            function AUshowPopup(){
+                aboutUsPopup.style.display = 'block';
+                aboutUsTxt.style.color = 'red';
+            }
+            function AUhidePopup(){
+                aboutUsPopup.style.display = 'none';
+                aboutUsTxt.style.color = 'white';
+            }
+            function PshowPopup(){
+               productsPopup.style.display = 'block';
+               productsTxt.style.color = 'red';
+            }
+            function PhidePopup(){
+                productsPopup.style.display = 'none';
+                productsTxt.style.color = 'white';
+            }
+            //Iznad je HEADER
+        </script>
+
+    </body>
+</html>

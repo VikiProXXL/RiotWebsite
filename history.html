@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>History</title>
+        <meta chatset="utf-8">
+        <link rel="stylesheet" href="history.css">
+    </head>
+    <body>
+        <div id="header-holder">
+            <div id="header">
+                <a id="riot-logo" href="https://www.riotgames.com/en">
+                    <img id="logo-wht" src="E:\Viktor kursevi\Projects\assets\RiotLogo.png" alt="Riot Logo">
+                    <img id="logo-red" src="E:\Viktor kursevi\Projects\assets\RiotLogoRed.png" alt="Riot Logo">
+                </a>
+                
+                <div id="themes">
+                    <div id="about-us">
+                        <a id="about-us-txt" href="E:\Viktor kursevi\Projects\Riot-website\about-us.html">ABOUT THEM</a>
+                    </div>
+                    <div id="products">
+                        <a id="products-txt" href="E:\Viktor kursevi\Projects\Riot-website\our-products.html">THEIR PRODUCTS</a>
+                    </div>
+                    
+                </div>
+                
+                <div id="social-medias">
+                    <a href="https://www.youtube.com/@riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\YoutubeIcon.png" alt="Youtube">
+                    </a>
+                    <a href="https://www.instagram.com/riotgames/">
+                        <img src="E:\Viktor kursevi\Projects\assets\InstagramLogoBlack.png" alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com/riotgames">
+                        <img src="E:\Viktor kursevi\Projects\assets\TwitterLogo.png" alt="Twitter">
+                    </a>
+                </div>
+                
+            </div>
+
+            <div id="popup-aboutus">
+                <a href="history.html">History</a><br><br>
+                <a href="offices.html">Offices</a>
+            </div>
+            <div id="popup-products">
+                <a href="games.html">Games</a><br><br>
+                <a href="music.html">Music</a><br><br>
+                <a href="movie.html">Movie</a>
+            </div>
+        </div>
+
+        <div id="site">
+
+            <div id="text">
+                <p id="txt2006" class="year">The company was founded by University of Southern California roommates Brandon Beck and Marc Merrill.<br><br>
+                    The company was founded in September by University of Southern California roommates Brandon Beck and Marc Merrill.<br>
+                </p>
+                <p id="txt2009" class="year">At October 27th Riot released ther first game by name "League of Legends".<br><br> 
+                    It exploded it popularity and now its one of most popular games in the world
+                </p>
+                <p id="txt2011" class="year">The Season 1 Championship was held in June 2011 at Dreamhack Summer 2011. <br><br> It featured a US$100,000 tournament prize pool. <br><br>
+                    8 teams from Europe, North America, Southeast Asia participated in the championship.<br><br>
+                    Today, League of Legends is one of the largest esports in the world
+                </p>
+                <p id="txt2018" class="year">At November 2, 2018 Riot releaced a virtual k-pop group featuring Soyeon and Miyeon from (G)I-dle. <br><br>
+                    The song topped the World Digital Songs chart <br><br>
+                    The song has been certified platinum by the Recording Industry Association of America</p>
+                <p id="txt2019" class="year">At June 2019 riot added a gamemode for Leagie of Legend that was a auto-battler. <br><br>
+                It exploded in popularity so at March 2020 it became a standalone game <br><br>
+                They also established a team called Riot Forge that made games single player games in League of Legends universe
+                </p>
+                <p id="txt2021" class="year">Riot Games collaborated with French animation studio Fortiche to release an animated series called Arcane. <br><br>
+                     The series was released worldwide in November 2021 on Netflix</p>
+            </div>
+
+            <div id="timeline-holder">
+                <div id="timeline">
+                    <div id="year-line-holder">
+                        <div id="holder-2006">
+                            <div id="line-2006" class="year-line"></div>
+                            <a id="t2006" class="year-btn" >2006</a>
+                        </div>
+                        <div id="holder-2009">
+                            <div id="line-2009" class="year-line"></div>
+                            <a id="t2009" class="year-btn" >2009</a>
+                        </div>
+                        <div id="holder-2011">
+                            <div id="line-2011" class="year-line"></div>
+                            <a id="t2011" class="year-btn">2011</a>
+                        </div>
+                        <div id="holder-2018">
+                            <div id="line-2018" class="year-line"></div>
+                            <a id="t2018"class="year-btn" >2018</a>
+                        </div>
+                        <div id="holder-2019">
+                            <div id="line-2019" class="year-line"></div>
+                            <a id="t2019" class="year-btn">2019</a>
+                        </div>
+                        <div id="holder-2021">
+                            <div id="line-2021" class="year-line"></div>
+                            <a id="t2021" class="year-btn">2021</a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                
+            </div>
+            
+
+        </div>
+
+        <script>
+            var aboutUs = document.getElementById('about-us');
+            aboutUs.addEventListener("mouseover",AUshowPopup, "false");
+            aboutUs.addEventListener("mouseout",AUhidePopup, "false");
+
+            var aboutUsTxt = document.getElementById('about-us-txt');
+
+            var aboutUsPopup = document.getElementById('popup-aboutus');
+            aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
+            aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
+
+            
+
+            var products = document.getElementById('products');
+            products.addEventListener("mouseover",PshowPopup, "false");
+            products.addEventListener("mouseout",PhidePopup, "false");
+
+            var productsTxt = document.getElementById('products-txt');
+
+            var productsPopup = document.getElementById('popup-products');
+            productsPopup.addEventListener("mouseover",PshowPopup, "false")
+            productsPopup.addEventListener("mouseout",PhidePopup, "false");
+
+
+            function AUshowPopup(){
+                aboutUsPopup.style.display = 'block';
+                aboutUsTxt.style.color = 'red';
+            }
+            function AUhidePopup(){
+                aboutUsPopup.style.display = 'none';
+                aboutUsTxt.style.color = 'white';
+            }
+            function PshowPopup(){
+               productsPopup.style.display = 'block';
+               productsTxt.style.color = 'red';
+            }
+            function PhidePopup(){
+                productsPopup.style.display = 'none';
+                productsTxt.style.color = 'white';
+            }
+
+            //Pokazivanje texta na click
+
+            var year = document.querySelectorAll(".year");
+
+            var btn2006 = document.getElementById("t2006");
+            btn2006.addEventListener("click", Popup2006, "false");
+            var btn2009 = document.getElementById("t2009");
+            btn2009.addEventListener("click", Popup2009, "false");
+            var btn2011 = document.getElementById("t2011");
+            btn2011.addEventListener("click", Popup2011, "false");
+            var btn2018 = document.getElementById("t2018");
+            btn2018.addEventListener("click", Popup2018, "false");
+            var btn2019 = document.getElementById("t2019");
+            btn2019.addEventListener("click", Popup2019, "false");
+            var btn2021 = document.getElementById("t2021");
+            btn2021.addEventListener("click", Popup2021, "false");
+
+
+
+            function RemoveText(){
+                var x=0;
+                for(x=0; x < year.length; x++){
+                    var ovajText = year[x];
+                    ovajText.style.display = "none";
+                };
+            }
+
+            function Popup2006(){
+                RemoveText();
+
+                var txt2006 = document.getElementById("txt2006");
+                txt2006.style.display = "block";
+            }
+            function Popup2009(){
+                RemoveText();
+
+                var txt2009 = document.getElementById("txt2009");
+                txt2009.style.display = "block";
+            }
+            function Popup2011(){
+                RemoveText();
+
+                var txt2011 = document.getElementById("txt2011");
+                txt2011.style.display = "block";
+            }
+            function Popup2018(){
+                RemoveText();
+
+                var txt2018 = document.getElementById("txt2018");
+                txt2018.style.display = "block";
+            }
+            function Popup2019(){
+                RemoveText();
+
+                var txt2019 = document.getElementById("txt2019");
+                txt2019.style.display = "block";
+            }
+            function Popup2021(){
+                RemoveText();
+
+                var txt2021 = document.getElementById("txt2021");
+                txt2021.style.display = "block";
+            }
+        </script>
+
+    </body>
+</html>
