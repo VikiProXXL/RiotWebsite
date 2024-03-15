@@ -133,8 +133,6 @@ body{
 }
 
 #btn-left{
-    position: relative;
-    z-index: 1;
     grid-area: lt;
     width: 100px;
     height: 100%;
@@ -149,8 +147,6 @@ body{
 
 
 #btn-right{
-    position: relative;
-    z-index: 1;
     grid-area: rt;
     width: 100px;
     height: 100%;
