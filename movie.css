@@ -111,7 +111,7 @@ body{
     width: 100%;
     height: 100vh;
     text-align: center;
-    background-image: url("E:/Viktor kursevi/Projects/assets/ArcaneBig.png");
+    background-image: url("assets/ArcaneBig.png");
     background-size: cover;
     background-attachment: fixed;
 }

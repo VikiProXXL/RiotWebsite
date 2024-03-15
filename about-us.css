@@ -107,7 +107,7 @@ body{
 /*Iznad je HEARED*/
 #aboutus-header{
     height: 700px;
-    background: url("E:/Viktor kursevi/Projects/assets/RiotOfficeBlack.png");
+    background: url("assets/RiotOfficeBlack.png");
     background-size: cover;
     background-position: 0px -200px;
 }
