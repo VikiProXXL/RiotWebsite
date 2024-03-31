@@ -3,6 +3,7 @@
     <head>
         <title>Movie series</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <link rel="stylesheet" href="movie.css">
     </head>
     <body>
@@ -15,11 +16,20 @@
                 
                 <div id="themes">
                     <div id="about-us">
-                        <a id="about-us-txt" href="about-us.html">ABOUT THEM</a>
+                        <a id="about-us-txt" href="about-us.html">ABOUT  THEM</a>
                     </div>
+                    <a>
+                        <img id="about-us-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="about-us-arr-up" src="assets/ArrowUp.png" alt="">
+                    </a>
                     <div id="products">
                         <a id="products-txt" href="our-products.html">THEIR PRODUCTS</a>
                     </div>
+                    <a>
+                        <img id="products-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="products-arr-up" src="assets/ArrowUp.png" alt="">
+                        
+                    </a>
                     
                 </div>
                 
@@ -74,7 +84,7 @@
         </div>
 
         <script>
-            var aboutUs = document.getElementById('about-us');
+           var aboutUs = document.getElementById('about-us');
             aboutUs.addEventListener("mouseover",AUshowPopup, "false");
             aboutUs.addEventListener("mouseout",AUhidePopup, "false");
 
@@ -83,6 +93,11 @@
             var aboutUsPopup = document.getElementById('popup-aboutus');
             aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
             aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
+
+            var aboutUsArrowUp = document.getElementById("about-us-arr-up");
+            aboutUsArrowUp.addEventListener("click", AUhidePopup, "false");
+            var aboutUsArrowDown = document.getElementById("about-us-arr-down");
+            aboutUsArrowDown.addEventListener("click", AUshowPopup, "false");
 
             
 
@@ -96,22 +111,43 @@
             productsPopup.addEventListener("mouseover",PshowPopup, "false")
             productsPopup.addEventListener("mouseout",PhidePopup, "false");
 
+            var productsArrowUp = document.getElementById("products-arr-up");
+            productsArrowUp.addEventListener("click", PhidePopup, "false");
+            var productsArrowDown = document.getElementById("products-arr-down");
+            productsArrowDown.addEventListener("click", PshowPopup, "false");
+
 
             function AUshowPopup(){
+                PhidePopup()
+
                 aboutUsPopup.style.display = 'block';
                 aboutUsTxt.style.color = 'red';
+
+                aboutUsArrowUp.style.display = "block";
+                aboutUsArrowDown.style.display = "none";
             }
             function AUhidePopup(){
                 aboutUsPopup.style.display = 'none';
                 aboutUsTxt.style.color = 'white';
+
+                aboutUsArrowUp.style.display = "none";
+                aboutUsArrowDown.style.display = "block";
             }
             function PshowPopup(){
-               productsPopup.style.display = 'block';
-               productsTxt.style.color = 'red';
+                AUhidePopup()
+
+                productsPopup.style.display = 'block';
+                productsTxt.style.color = 'red';
+
+                productsArrowUp.style.display = "block";
+                productsArrowDown.style.display = "none";
             }
             function PhidePopup(){
                 productsPopup.style.display = 'none';
                 productsTxt.style.color = 'white';
+
+                productsArrowUp.style.display = "none";
+                productsArrowDown.style.display = "block";
             }
         </script>
     </body>

@@ -3,6 +3,7 @@
     <head>
         <title>Games</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <link rel="stylesheet" href="games.css">
     </head>
     <body>
@@ -15,11 +16,20 @@
                 
                 <div id="themes">
                     <div id="about-us">
-                        <a id="about-us-txt" href="about-us.html">ABOUT THEM</a>
+                        <a id="about-us-txt" href="about-us.html">ABOUT  THEM</a>
                     </div>
+                    <a>
+                        <img id="about-us-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="about-us-arr-up" src="assets/ArrowUp.png" alt="">
+                    </a>
                     <div id="products">
                         <a id="products-txt" href="our-products.html">THEIR PRODUCTS</a>
                     </div>
+                    <a>
+                        <img id="products-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="products-arr-up" src="assets/ArrowUp.png" alt="">
+                        
+                    </a>
                     
                 </div>
                 
@@ -137,6 +147,11 @@
             aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
             aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
 
+            var aboutUsArrowUp = document.getElementById("about-us-arr-up");
+            aboutUsArrowUp.addEventListener("click", AUhidePopup, "false");
+            var aboutUsArrowDown = document.getElementById("about-us-arr-down");
+            aboutUsArrowDown.addEventListener("click", AUshowPopup, "false");
+
             
 
             var products = document.getElementById('products');
@@ -149,22 +164,43 @@
             productsPopup.addEventListener("mouseover",PshowPopup, "false")
             productsPopup.addEventListener("mouseout",PhidePopup, "false");
 
+            var productsArrowUp = document.getElementById("products-arr-up");
+            productsArrowUp.addEventListener("click", PhidePopup, "false");
+            var productsArrowDown = document.getElementById("products-arr-down");
+            productsArrowDown.addEventListener("click", PshowPopup, "false");
+
 
             function AUshowPopup(){
+                PhidePopup()
+
                 aboutUsPopup.style.display = 'block';
                 aboutUsTxt.style.color = 'red';
+
+                aboutUsArrowUp.style.display = "block";
+                aboutUsArrowDown.style.display = "none";
             }
             function AUhidePopup(){
                 aboutUsPopup.style.display = 'none';
                 aboutUsTxt.style.color = 'white';
+
+                aboutUsArrowUp.style.display = "none";
+                aboutUsArrowDown.style.display = "block";
             }
             function PshowPopup(){
-               productsPopup.style.display = 'block';
-               productsTxt.style.color = 'red';
+                AUhidePopup()
+
+                productsPopup.style.display = 'block';
+                productsTxt.style.color = 'red';
+
+                productsArrowUp.style.display = "block";
+                productsArrowDown.style.display = "none";
             }
             function PhidePopup(){
                 productsPopup.style.display = 'none';
                 productsTxt.style.color = 'white';
+
+                productsArrowUp.style.display = "none";
+                productsArrowDown.style.display = "block";
             }
 
             //Sadrzaj
@@ -195,93 +231,93 @@
 
             function LolChange(){
                 lolh.style.display = "none";
-                lolHold.style.paddingTop = "300px";
-                lolHold.style.width = "600px"
+                /*lolHold.style.paddingTop = "300px";*/
+                /*lolHold.style.width = "50vw"*/
                 loltxt.style.display = "block"
                 multySelect.style.backgroundImage = "url('assets/LolBG.png')";
 
 
                 valh.style.display = "inline";
-                valHold.style.paddingTop = "400px";
-                valHold.style.width = "400px"
+                /*valHold.style.paddingTop = "400px";*/
+                /*valHold.style.width = "50vw"*/
                 valtxt.style.display = "none"
 
                 tfth.style.display = "inline";
-                tftHold.style.paddingTop = "400px";
-                tftHold.style.width = "400px"
+                /*tftHold.style.paddingTop = "400px";*/
+                /*tftHold.style.width = "50vw"*/
                 tfttxt.style.display = "none"
 
                 runeth.style.display = "inline";
-                runetHold.style.paddingTop = "400px";
-                runetHold.style.width = "400px"
+                /*runetHold.style.paddingTop = "400px";*/
+                /*runetHold.style.width = "400px"*/
                 runettxt.style.display = "none"
             }
             function ValChange(){
                 valh.style.display = "none";
-                valHold.style.paddingTop = "300px";
-                valHold.style.width = "600px"
+                /*valHold.style.paddingTop = "300px";*/
+                /*valHold.style.width = "600px"*/
                 valtxt.style.display = "block"
                 multySelect.style.backgroundImage = "url('assets/ValBG.png')";
 
                 lolh.style.display = "inline";
-                lolHold.style.paddingTop = "400px";
-                lolHold.style.width = "400px"
+                /*lolHold.style.paddingTop = "400px";*/
+                /*lolHold.style.width = "400px"*/
                 loltxt.style.display = "none"
 
                 tfth.style.display = "inline";
-                tftHold.style.paddingTop = "400px";
-                tftHold.style.width = "400px"
+                /*tftHold.style.paddingTop = "400px";*/
+                /*tftHold.style.width = "400px"*/
                 tfttxt.style.display = "none"
 
                 runeth.style.display = "inline";
-                runetHold.style.paddingTop = "400px";
-                runetHold.style.width = "400px"
+                /*runetHold.style.paddingTop = "400px";*/
+                /*runetHold.style.width = "400px"*/
                 runettxt.style.display = "none"
             }
 
             function TftChange(){
                 tfth.style.display = "none";
-                tftHold.style.paddingTop = "300px";
-                tftHold.style.width = "600px"
+                /*tftHold.style.paddingTop = "300px";*/
+                /*tftHold.style.width = "600px"*/
                 tfttxt.style.display = "block"
                 multySelect.style.backgroundImage = "url('assets/TftBG.png')";
 
                 lolh.style.display = "inline";
-                lolHold.style.paddingTop = "400px";
-                lolHold.style.width = "400px"
+                /*lolHold.style.paddingTop = "400px";*/
+                /*lolHold.style.width = "400px"*/
                 loltxt.style.display = "none"
 
                 valh.style.display = "inline";
-                valHold.style.paddingTop = "400px";
-                valHold.style.width = "400px"
+                /*valHold.style.paddingTop = "400px";*/
+                /*valHold.style.width = "400px"*/
                 valtxt.style.display = "none"
 
                 runeth.style.display = "inline";
-                runetHold.style.paddingTop = "400px";
-                runetHold.style.width = "400px"
+                /*runetHold.style.paddingTop = "400px";*/
+               /* runetHold.style.width = "400px"*/
                 runettxt.style.display = "none"
             }
 
             function RunetChange(){
                 runeth.style.display = "none";
-                runetHold.style.paddingTop = "300px";
-                runetHold.style.width = "600px"
+                /*runetHold.style.paddingTop = "300px";*/
+                /*runetHold.style.width = "600px"*/
                 runettxt.style.display = "block"
                 multySelect.style.backgroundImage = "url('assets/RunetBG.png')";
 
                 lolh.style.display = "inline";
-                lolHold.style.paddingTop = "400px";
-                lolHold.style.width = "400px"
+                /*lolHold.style.paddingTop = "400px";*/
+                /*lolHold.style.width = "400px"*/
                 loltxt.style.display = "none"
 
                 valh.style.display = "inline";
-                valHold.style.paddingTop = "400px";
-                valHold.style.width = "400px"
+                /*valHold.style.paddingTop = "400px";*/
+                /*valHold.style.width = "400px"*/
                 valtxt.style.display = "none"
 
                 tfth.style.display = "inline";
-                tftHold.style.paddingTop = "400px";
-                tftHold.style.width = "400px"
+                /*tftHold.style.paddingTop = "400px";*/
+                /*tftHold.style.width = "400px"*/
                 tfttxt.style.display = "none"
             }
 

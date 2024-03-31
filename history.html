@@ -3,6 +3,7 @@
     <head>
         <title>History</title>
         <meta chatset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <link rel="stylesheet" href="history.css">
     </head>
     <body>
@@ -15,11 +16,20 @@
                 
                 <div id="themes">
                     <div id="about-us">
-                        <a id="about-us-txt" href="about-us.html">ABOUT THEM</a>
+                        <a id="about-us-txt" href="about-us.html">ABOUT  THEM</a>
                     </div>
+                    <a>
+                        <img id="about-us-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="about-us-arr-up" src="assets/ArrowUp.png" alt="">
+                    </a>
                     <div id="products">
                         <a id="products-txt" href="our-products.html">THEIR PRODUCTS</a>
                     </div>
+                    <a>
+                        <img id="products-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="products-arr-up" src="assets/ArrowUp.png" alt="">
+                        
+                    </a>
                     
                 </div>
                 
@@ -51,25 +61,31 @@
         <div id="site">
 
             <div id="text">
-                <p id="txt2006" class="year">The company was founded by University of Southern California roommates Brandon Beck and Marc Merrill.<br><br>
-                    The company was founded in September by University of Southern California roommates Brandon Beck and Marc Merrill.<br>
+                <p id="txtBegin" class="year">
+                    Click on the year to learn accomplishments of that year <br> <br>
+                    Move the slider at the bottom to move the time-line <br> <br>
+                    Or swipe with your finger
                 </p>
-                <p id="txt2009" class="year">At October 27th Riot released ther first game by name "League of Legends".<br><br> 
-                    It exploded it popularity and now its one of most popular games in the world
-                </p>
-                <p id="txt2011" class="year">The Season 1 Championship was held in June 2011 at Dreamhack Summer 2011. <br><br> It featured a US$100,000 tournament prize pool. <br><br>
-                    8 teams from Europe, North America, Southeast Asia participated in the championship.<br><br>
-                    Today, League of Legends is one of the largest esports in the world
-                </p>
-                <p id="txt2018" class="year">At November 2, 2018 Riot releaced a virtual k-pop group featuring Soyeon and Miyeon from (G)I-dle. <br><br>
-                    The song topped the World Digital Songs chart <br><br>
-                    The song has been certified platinum by the Recording Industry Association of America</p>
-                <p id="txt2019" class="year">At June 2019 riot added a gamemode for Leagie of Legend that was a auto-battler. <br><br>
-                It exploded in popularity so at March 2020 it became a standalone game <br><br>
-                They also established a team called Riot Forge that made games single player games in League of Legends universe
-                </p>
-                <p id="txt2021" class="year">Riot Games collaborated with French animation studio Fortiche to release an animated series called Arcane. <br><br>
-                     The series was released worldwide in November 2021 on Netflix</p>
+                <div id="year-txt">
+                    <p id="txt2006" class="year">The company was founded by University of Southern California roommates Brandon Beck and Marc Merrill.<br><br>
+                        The company was founded in September by University of Southern California roommates Brandon Beck and Marc Merrill.<br>
+                    </p>
+                    <p id="txt2009" class="year">At October 27th Riot released ther first game by name "League of Legends".<br><br> 
+                        It exploded it popularity and now its one of most popular games in the world
+                    </p>
+                    <p id="txt2011" class="year">The Season 1 Championship was held in June 2011 at Dreamhack Summer 2011. <br><br> It featured a US$100,000 tournament prize pool. <br><br>
+                        Today, League of Legends is one of the largest esports in the world
+                    </p>
+                    <p id="txt2018" class="year">At November 2, 2018 Riot releaced a virtual k-pop group featuring Soyeon and Miyeon from (G)I-dle. <br><br>
+                        The song topped the World Digital Songs chart <br><br>
+                        The song has been certified platinum by the Recording Industry Association of America</p>
+                    <p id="txt2019" class="year">At June 2019 riot added a gamemode for Leagie of Legend that was a auto-battler. <br><br>
+                    It exploded in popularity so at March 2020 it became a standalone game <br><br>
+                    They also established a team called Riot Forge that made games single player games in League of Legends universe
+                    </p>
+                    <p id="txt2021" class="year">Riot Games collaborated with French animation studio Fortiche to release an animated series called Arcane. <br><br>
+                        The series was released worldwide in November 2021 on Netflix</p>
+                </div>
             </div>
 
             <div id="timeline-holder">
@@ -110,7 +126,7 @@
         </div>
 
         <script>
-            var aboutUs = document.getElementById('about-us');
+           var aboutUs = document.getElementById('about-us');
             aboutUs.addEventListener("mouseover",AUshowPopup, "false");
             aboutUs.addEventListener("mouseout",AUhidePopup, "false");
 
@@ -119,6 +135,11 @@
             var aboutUsPopup = document.getElementById('popup-aboutus');
             aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
             aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
+
+            var aboutUsArrowUp = document.getElementById("about-us-arr-up");
+            aboutUsArrowUp.addEventListener("click", AUhidePopup, "false");
+            var aboutUsArrowDown = document.getElementById("about-us-arr-down");
+            aboutUsArrowDown.addEventListener("click", AUshowPopup, "false");
 
             
 
@@ -132,27 +153,53 @@
             productsPopup.addEventListener("mouseover",PshowPopup, "false")
             productsPopup.addEventListener("mouseout",PhidePopup, "false");
 
+            var productsArrowUp = document.getElementById("products-arr-up");
+            productsArrowUp.addEventListener("click", PhidePopup, "false");
+            var productsArrowDown = document.getElementById("products-arr-down");
+            productsArrowDown.addEventListener("click", PshowPopup, "false");
+
 
             function AUshowPopup(){
+                PhidePopup()
+
                 aboutUsPopup.style.display = 'block';
                 aboutUsTxt.style.color = 'red';
+
+                aboutUsArrowUp.style.display = "block";
+                aboutUsArrowDown.style.display = "none";
             }
             function AUhidePopup(){
                 aboutUsPopup.style.display = 'none';
                 aboutUsTxt.style.color = 'white';
+
+                aboutUsArrowUp.style.display = "none";
+                aboutUsArrowDown.style.display = "block";
             }
             function PshowPopup(){
-               productsPopup.style.display = 'block';
-               productsTxt.style.color = 'red';
+                AUhidePopup()
+
+                productsPopup.style.display = 'block';
+                productsTxt.style.color = 'red';
+
+                productsArrowUp.style.display = "block";
+                productsArrowDown.style.display = "none";
             }
             function PhidePopup(){
                 productsPopup.style.display = 'none';
                 productsTxt.style.color = 'white';
+
+                productsArrowUp.style.display = "none";
+                productsArrowDown.style.display = "block";
             }
 
             //Pokazivanje texta na click
 
             var year = document.querySelectorAll(".year");
+
+            var backG = document.getElementById("site");
+
+            var textHolder = document.getElementById("text");
+            var yearTxt = document.getElementById("year-txt");
 
             var btn2006 = document.getElementById("t2006");
             btn2006.addEventListener("click", Popup2006, "false");
@@ -175,6 +222,7 @@
                     var ovajText = year[x];
                     ovajText.style.display = "none";
                 };
+                yearTxt.style.display = "block";
             }
 
             function Popup2006(){
@@ -182,37 +230,56 @@
 
                 var txt2006 = document.getElementById("txt2006");
                 txt2006.style.display = "block";
+
+
+                backG.style.backgroundImage = "url('assets/RiotOldLogo.png')"
             }
             function Popup2009(){
                 RemoveText();
 
                 var txt2009 = document.getElementById("txt2009");
                 txt2009.style.display = "block";
+
+
+                backG.style.backgroundImage = "url('assets/OldLoL.png')"
             }
             function Popup2011(){
                 RemoveText();
 
                 var txt2011 = document.getElementById("txt2011");
                 txt2011.style.display = "block";
+
+
+                backG.style.backgroundImage = "url('assets/LCS.png')"
             }
             function Popup2018(){
                 RemoveText();
 
                 var txt2018 = document.getElementById("txt2018");
                 txt2018.style.display = "block";
+
+
+                backG.style.backgroundImage = "url('assets/KDAHist.png')"
             }
             function Popup2019(){
                 RemoveText();
 
                 var txt2019 = document.getElementById("txt2019");
                 txt2019.style.display = "block";
+
+                backG.style.backgroundImage = "url('assets/TftHist.png')"
             }
             function Popup2021(){
                 RemoveText();
 
                 var txt2021 = document.getElementById("txt2021");
                 txt2021.style.display = "block";
+
+
+                backG.style.backgroundImage = "url('assets/ArcaneHist.png')"
             }
+
+        
         </script>
 
     </body>

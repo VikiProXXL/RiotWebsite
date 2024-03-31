@@ -3,6 +3,7 @@
     <head>
         <title>Our Products</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <link rel="stylesheet" href="our-products.css">
     </head>
     <body>
@@ -15,11 +16,20 @@
                 
                 <div id="themes">
                     <div id="about-us">
-                        <a id="about-us-txt" href="about-us.html">ABOUT THEM</a>
+                        <a id="about-us-txt" href="about-us.html">ABOUT  THEM</a>
                     </div>
+                    <a>
+                        <img id="about-us-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="about-us-arr-up" src="assets/ArrowUp.png" alt="">
+                    </a>
                     <div id="products">
                         <a id="products-txt" href="our-products.html">THEIR PRODUCTS</a>
                     </div>
+                    <a>
+                        <img id="products-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="products-arr-up" src="assets/ArrowUp.png" alt="">
+                        
+                    </a>
                     
                 </div>
                 
@@ -46,6 +56,7 @@
                 <a href="music.html">Music</a><br><br>
                 <a href="movie.html">Movie</a>
             </div>
+
         </div>
 
         <!--Sadrzaj-->
@@ -60,10 +71,10 @@
                         <p id="games-txt">World wide popular multiplayer games in multiple game ganre
                         and also popular singleplayer games</p>
                     </div>
-                    <img src="assets\LoL.png" alt="">
+                    <img id="games-img" src="assets\LoL.png" alt="">
                 </div>
                 <div id="music">
-                    <img src="assets\KDA.png" alt="">
+                    <img id="music-img" src="assets\KDA.png" alt="">
                     <div id="music-holder">
                         <a id="music-header" href="music.html">Music</a>
                         <p id="music-txt">Most popular videogame music. <br> With rock 'n' roll, K-pop and pop music</p>
@@ -74,7 +85,7 @@
                         <a id="movie-header" href="movie.html">Movie series</a>
                         <p id="movie-txt">Very popular animated movie ceries placed in League of Legends universe</p>
                     </div>
-                    <img src="assets\Arcane.png" alt="">
+                    <img id="movie-img" src="assets\Arcane.png" alt="">
                 </div>
             </div>
         </div>
@@ -90,6 +101,11 @@
             aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
             aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
 
+            var aboutUsArrowUp = document.getElementById("about-us-arr-up");
+            aboutUsArrowUp.addEventListener("click", AUhidePopup, "false");
+            var aboutUsArrowDown = document.getElementById("about-us-arr-down");
+            aboutUsArrowDown.addEventListener("click", AUshowPopup, "false");
+
             
 
             var products = document.getElementById('products');
@@ -102,22 +118,43 @@
             productsPopup.addEventListener("mouseover",PshowPopup, "false")
             productsPopup.addEventListener("mouseout",PhidePopup, "false");
 
+            var productsArrowUp = document.getElementById("products-arr-up");
+            productsArrowUp.addEventListener("click", PhidePopup, "false");
+            var productsArrowDown = document.getElementById("products-arr-down");
+            productsArrowDown.addEventListener("click", PshowPopup, "false");
+
 
             function AUshowPopup(){
+                PhidePopup()
+
                 aboutUsPopup.style.display = 'block';
                 aboutUsTxt.style.color = 'red';
+
+                aboutUsArrowUp.style.display = "block";
+                aboutUsArrowDown.style.display = "none";
             }
             function AUhidePopup(){
                 aboutUsPopup.style.display = 'none';
                 aboutUsTxt.style.color = 'white';
+
+                aboutUsArrowUp.style.display = "none";
+                aboutUsArrowDown.style.display = "block";
             }
             function PshowPopup(){
-               productsPopup.style.display = 'block';
-               productsTxt.style.color = 'red';
+                AUhidePopup()
+
+                productsPopup.style.display = 'block';
+                productsTxt.style.color = 'red';
+
+                productsArrowUp.style.display = "block";
+                productsArrowDown.style.display = "none";
             }
             function PhidePopup(){
                 productsPopup.style.display = 'none';
                 productsTxt.style.color = 'white';
+
+                productsArrowUp.style.display = "none";
+                productsArrowDown.style.display = "block";
             }
         </script>
     </body>

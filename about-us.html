@@ -3,6 +3,7 @@
     <head>
         <title>About us</title>
         <meta chatset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <link rel="stylesheet" href="about-us.css">
     </head>
     <body>
@@ -15,11 +16,20 @@
                 
                 <div id="themes">
                     <div id="about-us">
-                        <a id="about-us-txt" href="about-us.html">ABOUT THEM</a>
+                        <a id="about-us-txt" href="about-us.html">ABOUT  THEM</a>
                     </div>
+                    <a>
+                        <img id="about-us-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="about-us-arr-up" src="assets/ArrowUp.png" alt="">
+                    </a>
                     <div id="products">
                         <a id="products-txt" href="our-products.html">THEIR PRODUCTS</a>
                     </div>
+                    <a>
+                        <img id="products-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="products-arr-up" src="assets/ArrowUp.png" alt="">
+                        
+                    </a>
                     
                 </div>
                 
@@ -58,12 +68,12 @@
 
         <div id="sadrzaj">
             <p>Riot Games, Inc. is an American video game developer,
-                 publisher, and esports tournament organizer based in Los Angeles, California.</p>
-                 <p>Originaly made a game called League of Legend 
-                    and after its success made more popular games</p>
-                <p>They are not only popular for their games but also for 
-                    their movie series, e-sports events and even music</p>
-                <p>Riot Games is acquired by Chinese conglomerate Tencent.</p>
+            publisher, and esports tournament organizer based in Los Angeles, California.</p>
+            <p>Originaly made a game called League of Legend 
+            and after its success made more popular games</p>
+            <p>They are not only popular for their games but also for 
+            their movie series, e-sports events and even music</p>
+            <p>Riot Games is acquired by Chinese conglomerate Tencent.</p>
         </div>
 
         
@@ -83,6 +93,11 @@
             aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
             aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
 
+            var aboutUsArrowUp = document.getElementById("about-us-arr-up");
+            aboutUsArrowUp.addEventListener("click", AUhidePopup, "false");
+            var aboutUsArrowDown = document.getElementById("about-us-arr-down");
+            aboutUsArrowDown.addEventListener("click", AUshowPopup, "false");
+
             
 
             var products = document.getElementById('products');
@@ -95,22 +110,43 @@
             productsPopup.addEventListener("mouseover",PshowPopup, "false")
             productsPopup.addEventListener("mouseout",PhidePopup, "false");
 
+            var productsArrowUp = document.getElementById("products-arr-up");
+            productsArrowUp.addEventListener("click", PhidePopup, "false");
+            var productsArrowDown = document.getElementById("products-arr-down");
+            productsArrowDown.addEventListener("click", PshowPopup, "false");
+
 
             function AUshowPopup(){
+                PhidePopup()
+
                 aboutUsPopup.style.display = 'block';
                 aboutUsTxt.style.color = 'red';
+
+                aboutUsArrowUp.style.display = "block";
+                aboutUsArrowDown.style.display = "none";
             }
             function AUhidePopup(){
                 aboutUsPopup.style.display = 'none';
                 aboutUsTxt.style.color = 'white';
+
+                aboutUsArrowUp.style.display = "none";
+                aboutUsArrowDown.style.display = "block";
             }
             function PshowPopup(){
-               productsPopup.style.display = 'block';
-               productsTxt.style.color = 'red';
+                AUhidePopup()
+
+                productsPopup.style.display = 'block';
+                productsTxt.style.color = 'red';
+
+                productsArrowUp.style.display = "block";
+                productsArrowDown.style.display = "none";
             }
             function PhidePopup(){
                 productsPopup.style.display = 'none';
                 productsTxt.style.color = 'white';
+
+                productsArrowUp.style.display = "none";
+                productsArrowDown.style.display = "block";
             }
             //Iznad je HEADER
         </script>

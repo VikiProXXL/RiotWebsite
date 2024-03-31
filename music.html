@@ -3,6 +3,7 @@
     <head>
         <title>Music</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
         <link rel="stylesheet" href="music.css">
     </head>
     <body>
@@ -15,11 +16,20 @@
                 
                 <div id="themes">
                     <div id="about-us">
-                        <a id="about-us-txt" href="about-us.html">ABOUT THEM</a>
+                        <a id="about-us-txt" href="about-us.html">ABOUT  THEM</a>
                     </div>
+                    <a>
+                        <img id="about-us-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="about-us-arr-up" src="assets/ArrowUp.png" alt="">
+                    </a>
                     <div id="products">
                         <a id="products-txt" href="our-products.html">THEIR PRODUCTS</a>
                     </div>
+                    <a>
+                        <img id="products-arr-down" src="assets/ArrowDown.png" alt="">
+                        <img id="products-arr-up" src="assets/ArrowUp.png" alt="">
+                        
+                    </a>
                     
                 </div>
                 
@@ -327,7 +337,7 @@
         </div>
 
         <script>
-             var aboutUs = document.getElementById('about-us');
+            var aboutUs = document.getElementById('about-us');
             aboutUs.addEventListener("mouseover",AUshowPopup, "false");
             aboutUs.addEventListener("mouseout",AUhidePopup, "false");
 
@@ -336,6 +346,11 @@
             var aboutUsPopup = document.getElementById('popup-aboutus');
             aboutUsPopup.addEventListener("mouseover",AUshowPopup, "false")
             aboutUsPopup.addEventListener("mouseout",AUhidePopup, "false");
+
+            var aboutUsArrowUp = document.getElementById("about-us-arr-up");
+            aboutUsArrowUp.addEventListener("click", AUhidePopup, "false");
+            var aboutUsArrowDown = document.getElementById("about-us-arr-down");
+            aboutUsArrowDown.addEventListener("click", AUshowPopup, "false");
 
             
 
@@ -349,27 +364,55 @@
             productsPopup.addEventListener("mouseover",PshowPopup, "false")
             productsPopup.addEventListener("mouseout",PhidePopup, "false");
 
+            var productsArrowUp = document.getElementById("products-arr-up");
+            productsArrowUp.addEventListener("click", PhidePopup, "false");
+            var productsArrowDown = document.getElementById("products-arr-down");
+            productsArrowDown.addEventListener("click", PshowPopup, "false");
+
 
             function AUshowPopup(){
+                PhidePopup()
+
                 aboutUsPopup.style.display = 'block';
                 aboutUsTxt.style.color = 'red';
+
+                aboutUsArrowUp.style.display = "block";
+                aboutUsArrowDown.style.display = "none";
             }
             function AUhidePopup(){
                 aboutUsPopup.style.display = 'none';
                 aboutUsTxt.style.color = 'white';
+
+                aboutUsArrowUp.style.display = "none";
+                aboutUsArrowDown.style.display = "block";
             }
             function PshowPopup(){
-               productsPopup.style.display = 'block';
-               productsTxt.style.color = 'red';
+                AUhidePopup()
+
+                productsPopup.style.display = 'block';
+                productsTxt.style.color = 'red';
+
+                productsArrowUp.style.display = "block";
+                productsArrowDown.style.display = "none";
             }
             function PhidePopup(){
                 productsPopup.style.display = 'none';
                 productsTxt.style.color = 'white';
+
+                productsArrowUp.style.display = "none";
+                productsArrowDown.style.display = "block";
             }
 
             // Sadrzaj
 
             var pjesme = document.getElementById("pjesme");
+            var media450 = window.matchMedia("(max-width: 450px)");
+            media450.addEventListener("change", function(){
+                pjesme.style.height = "auto";
+                if(media450.matches){
+                    pjesme.style.height = "100vh";
+                }
+            });
 
             var album = document.getElementById("album");
 
@@ -390,7 +433,16 @@
             heartImg.addEventListener("click", HeartPopup, "false");
 
             function KdaPopup(){
+
                 album.style.backgroundColor = "lightblue";
+
+                pjesme.style.backgroundImage = "url('assets/KDASongs2.png')"
+                pjesme.style.height = "auto";
+
+                var media450 = window.matchMedia("(max-width: 450px)");
+                if(media450.matches){
+                    pjesme.style.height = "100vh";
+                }   
 
                 songKda.style.display = "block";
 
@@ -401,6 +453,9 @@
             function TruePopup(){
                 album.style.backgroundColor = "#2d3647";
 
+                pjesme.style.height = "100vh";
+                pjesme.style.backgroundImage = "url('assets/TrueDmgBG.png')"
+
                 songTrue.style.display = "block";
 
                 songKda.style.display = "none";
@@ -410,6 +465,9 @@
             function PentaPopup(){
                 album.style.backgroundColor = "#966322";
 
+                pjesme.style.height = "auto";
+                pjesme.style.backgroundImage = "url('assets/PentaBG.png')"
+
                 songPenta.style.display = "block"
 
                 songKda.style.display = "none";
@@ -418,6 +476,9 @@
             }
             function HeartPopup(){
                 album.style.backgroundColor = "#2d3c41";
+
+                pjesme.style.height = "100vh";
+                pjesme.style.backgroundImage = "url('assets/HeartSteelBG.png')"
             
                 songHeart.style.display = "block";
 

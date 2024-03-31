@@ -38,6 +38,7 @@ body{
     flex-grow: 1;
     display: flex;
     font-family: arial;
+    padding-top: 25px;
 }
 
 #themes div{
@@ -45,12 +46,18 @@ body{
 }
 
 #themes div a{
+    text-align: right;
     font-size: 24px;
-    position: relative;
-    top: 35%;
     margin: 0px 15px;
     color: white;
     text-decoration: none;
+}
+#themes > a > img{
+    height: 20px;
+    width: 30px;
+}
+#themes > a > img:hover{
+    cursor: pointer;
 }
 
 #social-medias{
@@ -68,6 +75,12 @@ body{
     height: 28px;
     width: 28px;
 }
+#about-us-arr-up{
+    display: none;
+}
+#products-arr-up{
+    display: none;
+}
 
 #popup-aboutus{
     display: none;
@@ -84,7 +97,7 @@ body{
     justify-self: center;
     color: rgb(212, 210, 210);
     font-size: 28px;
-    margin: 10px 15px;
+    margin: 20px 20px;
     text-decoration: none;
 }
 
@@ -96,14 +109,14 @@ body{
     border-top: 3px solid red;
     width: 220px;
     height: auto;
-    margin-left: 410px;
+    margin-left: 440px;
 }
 
 #popup-products a{
     justify-self: center;
     color: rgb(212, 210, 210);
     font-size: 28px;
-    margin: 25px 15px;
+    margin: 20px 15px;
     text-decoration: none;
 }
 
@@ -112,28 +125,41 @@ body{
 #site{
     width: 3300px;
     height: 98vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("assets/RiotHist.png");
 }
 
 #text{
     position: relative;
     z-index: 0;
-    height: 480px;
-    width: 1700px;
-    padding: 20px;
+    height: 50vh;
+    width: 85%;
+    padding-top: 0px;
     margin: 120px 70px;
-    padding-top: 70px;
+    margin-bottom: 0px;
     text-align: center;
     position: fixed;
+    align-content: center;
+    background-color: #ffffff71;
     border: 5px dashed grey;
 }
 
-#text p{
+#txtBegin{
+    font-style: italic;
+    font-size: calc(1.5vw + 1.5vh);
+}
+#text > div{
+    height: 100%;
     display: none;
-    font-size: 31px;
+}
+#text > div > p{
+    display: none;
+    font-size: calc(1.5vw + 1.5vh);
 }
 
 #timeline-holder{
-    padding-top: 750px;
+    padding-top: 80vh;
 }
 
 #timeline{
@@ -168,7 +194,7 @@ body{
 }
 
 #t2006{
-    margin-left: 15px;
+   margin-left: 15px;
 }
 
 #holder-2009{
@@ -208,4 +234,309 @@ body{
 
 .year-btn:hover{
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1630px){
+    #site{
+        height: 100vh;
+        background-position: center;
+    }
+}
+@media only screen and (max-width: 1350px){
+    #themes div {
+        text-align: right;
+        margin: 0px 0px;
+    }
+
+    #site{
+        width: 1350;
+    }
+
+    #text{
+        width: 85%;
+        margin: 120px 70px;
+        position: fixed;
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px){
+    #text{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 815px){
+    #themes > div > a{
+        font-size: 20px;
+    }
+    
+    #popup-products{
+        margin-left: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 753px){
+    #themes div a{
+        font-size: 20px;
+        margin: 0px 5px;
+    }
+
+    #popup-aboutus{
+        width: 180px;
+        margin-left: 200px;
+    }
+    #popup-products{
+        width: 200px;
+        height: auto;
+        margin-left: 380px;
+    }
+
+    #text{
+        width: 75%;
+    }
+
+    #txt2011{
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 713px){
+    #themes div a{
+        font-size: 18px;
+    }
+
+    #popup-aboutus{
+        width: 160px;
+        margin-left: 200px;
+    }
+    #popup-aboutus a{
+        font-size: 24px;
+    }
+    #popup-products{
+        width: 180px;
+        margin-left: 370px;
+    }
+    #popup-products a{
+        font-size: 24px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 694px){
+    #themes div a{
+        font-size: 18px;
+    }
+
+    #social-medias a img{
+        margin: 5px 3px;
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media only screen and (max-width: 669px){
+    #themes div a{
+        font-size: 14px;
+    }
+
+    #popup-aboutus{
+        width: 140px;
+        margin-left: 200px;
+    }
+    #popup-aboutus a{
+        font-size: 20px;
+    }
+    #popup-products{
+        width: 160px;
+        margin-left: 340px;
+    }
+    #popup-products a{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    #header{
+        height: 80px;
+    }
+
+    #themes div {
+        text-align: right;
+        margin: 0px 0px;
+    }
+
+    #riot-logo{
+        width: 40%;
+        height: 100%;
+        align-self: center;
+    }
+    #logo-wht{
+        width: 80%;
+    }
+    #logo-red{
+        width: 80%;
+    }
+
+    #popup-aboutus{
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+        justify-content: center;
+    }
+    #popup-aboutus a{
+        font-size: 18px;
+    }
+    #popup-products{
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+        justify-content: center;
+    }
+    #popup-products a{
+        font-size: 20px;
+    }
+
+    #text{
+        margin-top: 98px;
+    }
+}
+
+@media only screen and (max-width: 606px){
+    #header{
+        height: 120px;
+    }
+
+    #text{
+        width: 70%;
+        margin-top: 130px;
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #riot-logo{
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #text{
+        margin-left: 40px;
+    } 
+}
+
+@media only screen and (max-width : 403px){
+    #header-content {
+        padding-top: 200px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    #themes div a{
+        font-size: 14px;
+    }
+
+    #text{
+        margin-left: 40px;
+    }
+}
+
+@media only screen and (max-width : 352px){
+    #header{
+        height: 120px;
+    }
+
+    #themes{
+        padding-top: 45px;
+    }
+}
+
+@media only screen and (max-width : 352px){
+    #themes div a{
+        font-size: 11px;
+    }
+
+    #themes > a > img{
+        height: 17px;
+        width: 27px;
+    }
+}
+
+
+@media only screen and (max-height: 680px){
+    #timeline{
+        height: 15px;
+        margin: 0px 50px;
+    }
+
+    .year-line{
+        width: 15px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-height: 523px){
+    #text{
+        margin-left: 30px;
+        width: 80%;
+        margin-top: 100px;
+    }
+
+    #timeline-holder{
+        padding-top: 80vh;
+    }
+    #timeline{
+        height: 2vh;
+    }
+
+    #year-line-holder > div > a{
+        font-size: calc(6vh);
+    }
+    #year-line-holder > div > div{
+        height: 6vh;
+    }
+    #line-2006{
+        margin-left: 8vh;
+    }
+}
+
+@media only screen and (max-height: 392px){
+    #header{
+        height: 70px;
+    }
+
+    #text{
+        height: 35vh;
+        margin-top: 80px;
+    }
+    
+    #line-2006{
+        margin-left: 9vh;
+    }
+
+    #text > div > p{
+        font-size: calc(1.2vw + 1.2vh);
+    }
+}
+
+@media only screen and (max-height: 392px) and (max-width: 742px){
+    #popup-aboutus{
+        margin-left: 170px;
+    }
+    #popup-products{
+        margin-left: 350px;
+    }
+}
+
+@media only screen and (max-height: 392px) and (max-width: 650px){
+    #popup-aboutus{
+        margin-left: 0px;
+    }
+    #popup-products{
+        margin-left: 0px;
+    }
 }
