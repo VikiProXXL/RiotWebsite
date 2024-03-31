@@ -425,12 +425,12 @@ body{
                         "txt"
                         "pic";
         grid-template-columns: 90vw;
-        grid-template-rows: 2.1vw 90vw 150vw;
+        grid-template-rows: 10vw auto 150vw;
     }
 
     #content-txt{
         font-size: 4vw;
-        margin-top: 10vw;
+        padding-top: 5vw;
     }
 
     #content img{
