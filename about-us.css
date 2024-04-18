@@ -73,6 +73,11 @@ body{
     height: 28px;
     width: 28px;
 }
+
+#about-us{
+    position: relative;
+    display: block;
+}
 #about-us-arr-up{
     display: none;
 }
@@ -81,14 +86,17 @@ body{
 }
 
 #popup-aboutus{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0;
     display: none;
     text-align: center;
     padding: 10px 0px;
     background-color: rgb(41, 41, 41);
     border-top: 3px solid red;
-    width: 200px;
+    width: 100%;
     height: auto;
-    margin-left: 200px;
 }
 
 #popup-aboutus a{
@@ -99,15 +107,23 @@ body{
     text-decoration: none;
 }
 
+#products{
+    position: relative;
+    display: block;
+}
 #popup-products{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: -2;
     display: none;
     text-align: center;
     padding: 10px 0px;
     background-color: rgb(41, 41, 41);
     border-top: 3px solid red;
-    width: 220px;
+    width: 100%;
     height: auto;
-    margin-left: 440px;
 }
 
 #popup-products a{
@@ -116,6 +132,20 @@ body{
     font-size: 28px;
     margin: 20px 15px;
     text-decoration: none;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin: 7px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
 }
 /*Iznad je HEARED*/
 #aboutus-header{
@@ -156,7 +186,7 @@ body{
         background-position: 0px 0px;
     }
 
-    #themes div {
+    #themes .main-theme {
         text-align: right;
         margin: 0px 0px;
     }
@@ -174,9 +204,9 @@ body{
         font-size: 20px;
     }
     
-    #popup-products{
+    /*#popup-products{
         margin-left: 400px;
-    }
+    }*/
 }
 
 @media only screen and (max-width: 753px){
@@ -199,13 +229,13 @@ body{
     }
 
     #popup-aboutus{
-        width: 180px;
-        margin-left: 200px;
+        /*width: 180px;*/
+        /*margin-left: 200px;*/
     }
     #popup-products{
-        width: 200px;
+        /*width: 200px;*/
         height: auto;
-        margin-left: 380px;
+        /*margin-left: 380px;*/
     }
 
     #sadrzaj{
@@ -224,15 +254,15 @@ body{
     }
 
     #popup-aboutus{
-        width: 160px;
-        margin-left: 200px;
+        /*width: 160px;*/
+        /*margin-left: 200px;*/
     }
     #popup-aboutus a{
         font-size: 24px;
     }
     #popup-products{
-        width: 180px;
-        margin-left: 370px;
+        /*width: 180px;*/
+        /*margin-left: 370px;*/
     }
     #popup-products a{
         font-size: 24px;
@@ -254,23 +284,61 @@ body{
 }
 
 @media only screen and (max-width: 669px){
+    #themes{
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        gap: 0;
+        padding-bottom: 25px;
+        background-color: rgb(31, 31, 31);
+        border-top: 3px solid red;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        transition: 0.3s;
+    }
+    #themes.active{
+        top: 80px;
+    }
+    #themes .main-theme{
+        margin-left: 40px;
+    }
     #themes div a{
         font-size: 14px;
     }
 
     #popup-aboutus{
-        width: 140px;
-        margin-left: 200px;
+        top: 225%;
     }
     #popup-aboutus a{
         font-size: 20px;
     }
     #popup-products{
-        width: 160px;
-        margin-left: 340px;
+        top: 225%;
     }
     #popup-products a{
         font-size: 20px;
+    }
+
+    #social-medias{
+        align-content: center;
+    }
+
+    .burger{
+        display: block;
+        margin: auto 20px;
+        align-self: center;
+    }
+
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .burger.active .bar:nth-child(1){
+        transform: translateY(12px) rotate(45deg);
+    }
+    .burger.active .bar:nth-child(3){
+        transform: translateY(-12px) rotate(-45deg);
     }
 }
 
@@ -279,8 +347,11 @@ body{
         height: 90px;
     }
 
+    #themes.active{
+        top: 90px;
+    }
+
     #themes div {
-        text-align: right;
         margin: 0px 0px;
     }
 
@@ -344,6 +415,18 @@ body{
     }
 }
 
+@media only screen and (max-width: 537px){
+    #themes .main-theme{
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 423px){
+    #themes > .main-theme > a{
+        font-size: 10px;
+    }
+}
+
 @media only screen and (max-width : 403px){
     #header-content {
         padding-top: 200px;
@@ -372,7 +455,17 @@ body{
     }
 
     #themes{
-        padding-top: 45px;
+        padding-top: 30px;
+    }
+    #themes.active {
+        top: 120px;
+    }
+
+    #popup-aboutus{
+        top: 240%;
+    }
+    #popup-products{
+        top: 240%;
     }
 }
 
@@ -384,5 +477,21 @@ body{
     #themes > a > img{
         height: 17px;
         width: 27px;
+    }
+}
+
+@media only screen and (max-width : 290px){
+    #themes{
+        justify-content: left;
+    }
+}
+
+@media only screen and (max-width : 275px){
+    #themes{
+        justify-content: center;
+    }
+
+    #themes .main-theme {
+        margin-left: 0px;
     }
 }

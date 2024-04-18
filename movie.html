@@ -15,15 +15,24 @@
                 </a>
                 
                 <div id="themes">
-                    <div id="about-us">
+                    <div id="about-us" class="main-theme">
                         <a id="about-us-txt" href="about-us.html">ABOUT  THEM</a>
+                        <div id="popup-aboutus">
+                            <a href="history.html">History</a><br><br>
+                            <a href="offices.html">Offices</a>
+                        </div>
                     </div>
                     <a>
                         <img id="about-us-arr-down" src="assets/ArrowDown.png" alt="">
                         <img id="about-us-arr-up" src="assets/ArrowUp.png" alt="">
                     </a>
-                    <div id="products">
+                    <div id="products" class="main-theme">
                         <a id="products-txt" href="our-products.html">THEIR PRODUCTS</a>
+                        <div id="popup-products">
+                            <a href="games.html">Games</a><br><br>
+                            <a href="music.html">Music</a><br><br>
+                            <a href="movie.html">Movie</a>
+                        </div>
                     </div>
                     <a>
                         <img id="products-arr-down" src="assets/ArrowDown.png" alt="">
@@ -44,17 +53,13 @@
                         <img src="assets\TwitterLogo.png" alt="Twitter">
                     </a>
                 </div>
-                
-            </div>
 
-            <div id="popup-aboutus">
-                <a href="history.html">History</a><br><br>
-                <a href="offices.html">Offices</a>
-            </div>
-            <div id="popup-products">
-                <a href="games.html">Games</a><br><br>
-                <a href="music.html">Music</a><br><br>
-                <a href="movie.html">Movie</a>
+                <div class="burger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
             </div>
         </div>
 
@@ -84,7 +89,9 @@
         </div>
 
         <script>
-           var aboutUs = document.getElementById('about-us');
+           var themes = document.getElementById("themes");
+
+            var aboutUs = document.getElementById('about-us');
             aboutUs.addEventListener("mouseover",AUshowPopup, "false");
             aboutUs.addEventListener("mouseout",AUhidePopup, "false");
 
@@ -99,7 +106,7 @@
             var aboutUsArrowDown = document.getElementById("about-us-arr-down");
             aboutUsArrowDown.addEventListener("click", AUshowPopup, "false");
 
-            
+
 
             var products = document.getElementById('products');
             products.addEventListener("mouseover",PshowPopup, "false");
@@ -115,6 +122,29 @@
             productsArrowUp.addEventListener("click", PhidePopup, "false");
             var productsArrowDown = document.getElementById("products-arr-down");
             productsArrowDown.addEventListener("click", PshowPopup, "false");
+
+            var burger = document.querySelector(".burger");
+            burger.addEventListener("click", function(){
+                burger.classList.toggle("active");
+                themes.classList.toggle("active");
+
+                if(aboutUsPopup.style.display = "block"){
+                    aboutUsPopup.style.display = "none";
+
+                    aboutUsTxt.style.color = 'white';
+
+                    aboutUsArrowUp.style.display = "none";
+                    aboutUsArrowDown.style.display = "block";
+                }
+                if(productsPopup.style.display = "block"){
+                    productsPopup.style.display = "none";
+
+                    productsTxt.style.color = 'white';
+
+                    productsArrowUp.style.display = "none";
+                    productsArrowDown.style.display = "block";
+                }
+            })
 
 
             function AUshowPopup(){
@@ -149,6 +179,7 @@
                 productsArrowUp.style.display = "none";
                 productsArrowDown.style.display = "block";
             }
+
         </script>
     </body>
 </html>

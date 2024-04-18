@@ -15,15 +15,24 @@
                 </a>
                 
                 <div id="themes">
-                    <div id="about-us">
+                    <div id="about-us" class="main-theme">
                         <a id="about-us-txt" href="about-us.html">ABOUT  THEM</a>
+                        <div id="popup-aboutus">
+                            <a href="history.html">History</a><br><br>
+                            <a href="offices.html">Offices</a>
+                        </div>
                     </div>
                     <a>
                         <img id="about-us-arr-down" src="assets/ArrowDown.png" alt="">
                         <img id="about-us-arr-up" src="assets/ArrowUp.png" alt="">
                     </a>
-                    <div id="products">
+                    <div id="products" class="main-theme">
                         <a id="products-txt" href="our-products.html">THEIR PRODUCTS</a>
+                        <div id="popup-products">
+                            <a href="games.html">Games</a><br><br>
+                            <a href="music.html">Music</a><br><br>
+                            <a href="movie.html">Movie</a>
+                        </div>
                     </div>
                     <a>
                         <img id="products-arr-down" src="assets/ArrowDown.png" alt="">
@@ -44,16 +53,13 @@
                         <img src="assets\TwitterLogo.png" alt="Twitter">
                     </a>
                 </div>
-            </div>
 
-            <div id="popup-aboutus">
-                <a href="history.html">History</a><br><br>
-                <a href="offices.html">Offices</a>
-            </div>
-            <div id="popup-products">
-                <a href="games.html">Games</a><br><br>
-                <a href="music.html">Music</a><br><br>
-                <a href="movie.html">Movie</a>
+                <div class="burger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
             </div>
         </div>
 
@@ -137,6 +143,8 @@
         </div>
 
         <script>
+            var themes = document.getElementById("themes");
+
             var aboutUs = document.getElementById('about-us');
             aboutUs.addEventListener("mouseover",AUshowPopup, "false");
             aboutUs.addEventListener("mouseout",AUhidePopup, "false");
@@ -152,7 +160,7 @@
             var aboutUsArrowDown = document.getElementById("about-us-arr-down");
             aboutUsArrowDown.addEventListener("click", AUshowPopup, "false");
 
-            
+
 
             var products = document.getElementById('products');
             products.addEventListener("mouseover",PshowPopup, "false");
@@ -168,6 +176,29 @@
             productsArrowUp.addEventListener("click", PhidePopup, "false");
             var productsArrowDown = document.getElementById("products-arr-down");
             productsArrowDown.addEventListener("click", PshowPopup, "false");
+
+            var burger = document.querySelector(".burger");
+            burger.addEventListener("click", function(){
+                burger.classList.toggle("active");
+                themes.classList.toggle("active");
+
+                if(aboutUsPopup.style.display = "block"){
+                    aboutUsPopup.style.display = "none";
+
+                    aboutUsTxt.style.color = 'white';
+
+                    aboutUsArrowUp.style.display = "none";
+                    aboutUsArrowDown.style.display = "block";
+                }
+                if(productsPopup.style.display = "block"){
+                    productsPopup.style.display = "none";
+
+                    productsTxt.style.color = 'white';
+
+                    productsArrowUp.style.display = "none";
+                    productsArrowDown.style.display = "block";
+                }
+            })
 
 
             function AUshowPopup(){
@@ -231,93 +262,61 @@
 
             function LolChange(){
                 lolh.style.display = "none";
-                /*lolHold.style.paddingTop = "300px";*/
-                /*lolHold.style.width = "50vw"*/
                 loltxt.style.display = "block"
                 multySelect.style.backgroundImage = "url('assets/LolBG.png')";
 
 
                 valh.style.display = "inline";
-                /*valHold.style.paddingTop = "400px";*/
-                /*valHold.style.width = "50vw"*/
                 valtxt.style.display = "none"
 
                 tfth.style.display = "inline";
-                /*tftHold.style.paddingTop = "400px";*/
-                /*tftHold.style.width = "50vw"*/
                 tfttxt.style.display = "none"
 
                 runeth.style.display = "inline";
-                /*runetHold.style.paddingTop = "400px";*/
-                /*runetHold.style.width = "400px"*/
                 runettxt.style.display = "none"
             }
             function ValChange(){
                 valh.style.display = "none";
-                /*valHold.style.paddingTop = "300px";*/
-                /*valHold.style.width = "600px"*/
                 valtxt.style.display = "block"
                 multySelect.style.backgroundImage = "url('assets/ValBG.png')";
 
                 lolh.style.display = "inline";
-                /*lolHold.style.paddingTop = "400px";*/
-                /*lolHold.style.width = "400px"*/
                 loltxt.style.display = "none"
 
                 tfth.style.display = "inline";
-                /*tftHold.style.paddingTop = "400px";*/
-                /*tftHold.style.width = "400px"*/
                 tfttxt.style.display = "none"
 
                 runeth.style.display = "inline";
-                /*runetHold.style.paddingTop = "400px";*/
-                /*runetHold.style.width = "400px"*/
                 runettxt.style.display = "none"
             }
 
             function TftChange(){
                 tfth.style.display = "none";
-                /*tftHold.style.paddingTop = "300px";*/
-                /*tftHold.style.width = "600px"*/
                 tfttxt.style.display = "block"
                 multySelect.style.backgroundImage = "url('assets/TftBG.png')";
 
                 lolh.style.display = "inline";
-                /*lolHold.style.paddingTop = "400px";*/
-                /*lolHold.style.width = "400px"*/
                 loltxt.style.display = "none"
 
                 valh.style.display = "inline";
-                /*valHold.style.paddingTop = "400px";*/
-                /*valHold.style.width = "400px"*/
                 valtxt.style.display = "none"
 
                 runeth.style.display = "inline";
-                /*runetHold.style.paddingTop = "400px";*/
-               /* runetHold.style.width = "400px"*/
                 runettxt.style.display = "none"
             }
 
             function RunetChange(){
                 runeth.style.display = "none";
-                /*runetHold.style.paddingTop = "300px";*/
-                /*runetHold.style.width = "600px"*/
                 runettxt.style.display = "block"
                 multySelect.style.backgroundImage = "url('assets/RunetBG.png')";
 
                 lolh.style.display = "inline";
-                /*lolHold.style.paddingTop = "400px";*/
-                /*lolHold.style.width = "400px"*/
                 loltxt.style.display = "none"
 
                 valh.style.display = "inline";
-                /*valHold.style.paddingTop = "400px";*/
-                /*valHold.style.width = "400px"*/
                 valtxt.style.display = "none"
 
                 tfth.style.display = "inline";
-                /*tftHold.style.paddingTop = "400px";*/
-                /*tftHold.style.width = "400px"*/
                 tfttxt.style.display = "none"
             }
 
